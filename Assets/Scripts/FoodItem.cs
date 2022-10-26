@@ -6,6 +6,6 @@ public class FoodItem : ItemScriptableObject
 {
     public float healAmount;
     private void Start() {
-        itrmType = ItrmType.Food;
+        itemType = ItemType.Food;
     }
 }
