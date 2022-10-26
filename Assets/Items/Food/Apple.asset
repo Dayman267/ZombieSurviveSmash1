@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1408dfbf31ff4ee47bbfc4164becb3a6, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  itrmType: 0
+  itemType: 1
+  itemPrefab: {fileID: 8261760608190288127, guid: 8dadfda8612fa1744a4de27f21ea8606, type: 3}
   itemName: Apple
   maximumAmount: 10
   itemDescription: sdasd
