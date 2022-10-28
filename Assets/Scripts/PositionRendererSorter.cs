@@ -16,7 +16,7 @@ public class PositionRendererSorter : MonoBehaviour
 
     private void LateUpdate()
     {
-        myRenderer.sortingOrder = (int)(sortingOrderBase - transform.position.y - offset);
+        myRenderer.sortingOrder = (int)(sortingOrderBase - transform.position.y*10 + offset);
         if (runOnlyOnce)
         {
             Destroy(this);
