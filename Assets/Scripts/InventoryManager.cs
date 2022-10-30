@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-
 public class InventoryManager : MonoBehaviour
 {
     public GameObject UIPanel;
@@ -9,12 +8,15 @@ public class InventoryManager : MonoBehaviour
     public List<InventorySlot> slots = new List<InventorySlot>();
     public bool isOpened;
     private Camera mainCamera;
-    public float reachDistance = 3;
-    [SerializeField] private float maxDistance = 3;
-    public LayerMask allowGrab;
-    // Start is called before the first frame update
+    [SerializeField, Range(0, 5)] private float maxDistance = 1;
+    public Collider2D collider;
+    //private void Awake()
+    //{
+    //    UIPanel.SetActive(true);
+    //}
     void Start()
     {
+        collider = GetComponent<CircleCollider2D>();
         mainCamera = Camera.main;
         for (int i = 0; i < inventoryPanel.childCount; i++)
         {
@@ -26,7 +28,6 @@ public class InventoryManager : MonoBehaviour
         UIPanel.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -41,19 +42,10 @@ public class InventoryManager : MonoBehaviour
                 UIPanel.SetActive(false);
             }
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0)) GrabItem();
-        //Vector2 ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit2D hit;
-        //if (Physics2D.Raycast(ray, out hit))
-        //{
-        //    Debug.DrawRay(ray.origin, ray.direction * reachDistance, Color.green);
-        //    if (hit.collider.gameObject.GetComponent<Item>() != null)
-        //    {
-        //        AddItem(hit.collider.gameObject.GetComponent<Item>().item, hit.collider.gameObject.GetComponent<Item>().amount);
-        //        Destroy(hit.collider.gameObject.GetComponent<Item>());
-        //    }
-        //}
-        //else { Debug.DrawRay(ray.origin, ray.direction * reachDistance, Color.red); }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GrabItem();
+        }
     }
     private Vector3 ScreenToWorld(Camera camera, Vector3 position)
     {
@@ -62,37 +54,70 @@ public class InventoryManager : MonoBehaviour
     }
     private void GrabItem()
     {
-       
-        Debug.DrawRay(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position ,Color.red);
-        if (Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, allowGrab))
+
+        Debug.DrawRay(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, Color.red);
+        if (Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, LayerMask.GetMask("Objects")))
         {
-            Destroy(this.gameObject);
-            RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, allowGrab);
+            RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, LayerMask.GetMask("Objects"));
             if (_hit.collider.gameObject.GetComponent<Item>() != null)
             {
+                Debug.Log("jfjfjfj" + _hit.collider.gameObject);
                 AddItem(_hit.collider.gameObject.GetComponent<Item>().item, _hit.collider.gameObject.GetComponent<Item>().amount);
-                Destroy(_hit.collider.gameObject.GetComponent<Item>());
+                Destroy(_hit.collider.gameObject);
             }
         }
+
+
     }
-    private void AddItem(ItemScriptableObject _item, int _amount)
+    //}
+
+    //public static bool Triggered() 
+    //{
+
+    //        Vector2 firePointToMousePoint = mainCamera.ScreenToWorldPoint(Input.mousePosition) - firePoint.position;
+    //        Debug.Log(Mathf.Abs((mainCamera.ScreenToWorldPoint(Input.mousePosition) - firePoint.position).magnitude));
+    //        if (Mathf.Abs(firePointToMousePoint.magnitude) <= maxDistance) 
+    //        {
+    //            return true;
+    //        }
+    //        else return false; 
+    //}
+    public void AddItem(ItemScriptableObject _item, int _amount)
     {
         foreach (InventorySlot slot in slots)
         {
+           
             if (slot.item == _item)
             {
-                slot.amount += _amount;
-                return;
+                if (slot.amount + _amount <= _item.maximumAmount) 
+                {
+                    slot.amount += _amount;
+                    slot.itemAmountText.text = slot.amount.ToString();
+                    return;
+                }
+                break;
             }
+                
         }
         foreach (InventorySlot slot in slots)
         {
-            if (slot.isEmpty == false)
+            if (slot.isEmpty == true)
             {
                 slot.item = _item;
                 slot.amount = _amount;
                 slot.isEmpty = false;
+                slot.SetIcon(_item.icon);
+                slot.itemAmountText.text = _amount.ToString();
+                break;
+
             }
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(firePoint.position, maxDistance);
+    }
+
+
 }

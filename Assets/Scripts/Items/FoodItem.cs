@@ -5,6 +5,8 @@ using UnityEngine;
 public class FoodItem : ItemScriptableObject
 {
     public float healAmount;
+    public float staminaAmount;
+
     private void Start() {
         itemType = ItemType.Food;
     }
