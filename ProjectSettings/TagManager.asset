@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tilemap
   - Water
   - UI
   - Player
-  - 
+  - Objects
   - 
   - 
   - 
@@ -43,6 +43,12 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 1120545937
+    locked: 0
+  - name: Objects
+    uniqueID: 3074742001
     locked: 0
   - name: Player
     uniqueID: 468227261

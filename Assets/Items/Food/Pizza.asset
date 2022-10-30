@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1408dfbf31ff4ee47bbfc4164becb3a6, type: 3}
-  m_Name: Apple
+  m_Name: Pizza
   m_EditorClassIdentifier: 
-  itemType: 1
-  icon: {fileID: -769943076, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
-  itemPrefab: {fileID: 4378304796101053500, guid: a10c147e9cf49fe49a3e8ca18b6e6e58, type: 3}
-  itemName: Apple
+  itemType: 0
+  icon: {fileID: -1792897676, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
+  itemPrefab: {fileID: 103203184185530258, guid: dc6df33141b00de40970cebc1b40964f, type: 3}
+  itemName: Pizza
   maximumAmount: 10
-  itemDescription: sdasd
-  healAmount: 2.3
+  itemDescription: 
+  healAmount: 10
   staminaAmount: 0
