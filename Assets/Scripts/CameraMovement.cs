@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform camera;
     public Transform player;
-    private float speed = 3.0f;
-    
+    [SerializeField, Range(0, 10)] private float offset;
+
     void Update()
     {
-        Vector3 position = player.position;
-        position.z = -1.0F;
-        transform.position = Vector3.MoveTowards(transform.position, position, speed);
+        Vector3 temp = transform.position;
+        temp.x = player.position.x + (Camera.main.ScreenToViewportPoint(Input.mousePosition).x - 0.5f) * offset;
+        temp.y = player.position.y + (Camera.main.ScreenToViewportPoint(Input.mousePosition).y - 0.5f) * offset;
+        transform.position = temp;
     }
 }
