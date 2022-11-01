@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: hand_punch
+  m_Name: running_hand_punch
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,11 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1824382315, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
+    - time: 0.05
+      value: {fileID: 960150285, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
     - time: 0.11666667
+      value: {fileID: 1267716265, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
+    - time: 0.16666667
       value: {fileID: -1605176349, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
     - time: 0.23333333
       value: {fileID: 1189237012, guid: c33f23224d1d12e4584995daa4ee9df9, type: 3}
@@ -47,6 +51,8 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -1824382315, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
+    - {fileID: 960150285, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
+    - {fileID: 1267716265, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
     - {fileID: -1605176349, guid: 467808e12f62a8543b366bd8398b33eb, type: 3}
     - {fileID: 1189237012, guid: c33f23224d1d12e4584995daa4ee9df9, type: 3}
     - {fileID: 1189237012, guid: c33f23224d1d12e4584995daa4ee9df9, type: 3}
