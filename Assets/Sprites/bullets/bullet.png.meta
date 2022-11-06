@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4c11be39d97e14745ba58d1a22f53599
+guid: 8211729b4abb0d34d9eb4d006532a327
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,85 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pistol_shoot_0
+      name: bullet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8edf62b1d86553f4e80215a748e14e9b
+      internalID: -2133955513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 11
-        height: 19
-      alignment: 9
-      pivot: {x: 0.4522536, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cef51a2a75b4a94883d088c33764c73
-      internalID: 820598286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pistol_shoot_1
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 0
-        width: 10
-        height: 19
+        y: 5
+        width: 1
+        height: 1
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bfd372f3c3f28b47b24183b03f19cba
-      internalID: -404194071
+      spriteID: 1bee8d5e5b3b24249b0c7e65a64a38b2
+      internalID: -41347657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistol_shoot_2
+      name: bullet_2
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 13
-        height: 19
-      alignment: 9
-      pivot: {x: 0.54040056, y: 0.5}
+        x: 2
+        y: 5
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45b890d4e6877ad499a449a2866ff32b
-      internalID: 1213414295
+      spriteID: 50769562d3767e941aed8c2ea05a7528
+      internalID: 266873603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pistol_shoot_3
+      name: bullet_3
       rect:
         serializedVersion: 2
-        x: 38
-        y: 0
-        width: 12
-        height: 19
-      alignment: 9
-      pivot: {x: 0.58267146, y: 0.5}
+        x: 4
+        y: 4
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b65c663a1e9a3469ce354e18419726
-      internalID: -1701993335
+      spriteID: 6fc516e1d9f272c468d59f0414264827
+      internalID: 1813970252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c98bed94577ea498c12bb81360dbcb
+      internalID: 1399828049
       vertices: []
       indices: 
       edges: []
@@ -211,10 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pistol_shoot_1: -404194071
-      pistol_shoot_3: -1701993335
-      pistol_shoot_0: 820598286
-      pistol_shoot_2: 1213414295
+      bullet_2: 266873603
+      bullet_0: -2133955513
+      bullet_4: 1399828049
+      bullet_3: 1813970252
+      bullet_1: -41347657
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
