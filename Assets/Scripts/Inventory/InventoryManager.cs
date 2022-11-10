@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject UIPanel;
+    public GameObject UIBG;
     public Transform inventoryPanel;
     [SerializeField] private Transform firePoint;
     public List<InventorySlot> slots = new List<InventorySlot>();
@@ -25,7 +25,8 @@ public class InventoryManager : MonoBehaviour
                 slots.Add(inventoryPanel.GetChild(i).GetComponent<InventorySlot>());
             }
         }
-        UIPanel.SetActive(false);
+        UIBG.SetActive(false);
+        inventoryPanel.gameObject.SetActive(false);
     }
 
     void Update()
@@ -35,11 +36,13 @@ public class InventoryManager : MonoBehaviour
             isOpened = !isOpened;
             if (isOpened)
             {
-                UIPanel.SetActive(true);
+                UIBG.SetActive(true);
+                inventoryPanel.gameObject.SetActive(true);
             }
             else
             {
-                UIPanel.SetActive(false);
+                UIBG.SetActive(false);
+                inventoryPanel.gameObject.SetActive(false);
             }
         }
         if (Input.GetKeyDown(KeyCode.E))
