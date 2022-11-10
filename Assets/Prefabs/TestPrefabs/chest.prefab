@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 549665357969777836}
   - component: {fileID: 549665357969777837}
   - component: {fileID: 549665357969777826}
-  - component: {fileID: -1456552656695541996}
+  - component: {fileID: -5582312521153453260}
   m_Layer: 0
   m_Name: chest
   m_TagString: Untagged
@@ -128,8 +128,8 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: 0
   runOnlyOnce: 1
---- !u!68 &-1456552656695541996
-EdgeCollider2D:
+--- !u!61 &-5582312521153453260
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,19 +141,16 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.027989954, y: 0.28451014}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 0.625}
+    newSize: {x: 1, y: 0.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.98880404, y: 0.5018444}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.5436969, y: 0.42233276}
-  - {x: -0.57505625, y: 0.39435196}
-  - {x: -0.7704773, y: 0.32314968}
-  - {x: -1.0352974, y: 0.18800926}
-  - {x: -0.94170016, y: 0.094426155}
-  - {x: -0.51020396, y: 0.037459373}
-  - {x: 0.22901034, y: 0.02791214}
-  - {x: 1.0313275, y: 0.1489296}
-  - {x: 0.5487745, y: 0.4223318}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
