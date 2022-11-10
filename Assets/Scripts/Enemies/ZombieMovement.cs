@@ -10,8 +10,6 @@ public class ZombieMovement : MonoBehaviour
 
     private bool facingRight = true;
     private float direction;
-    private float startX;
-    private float endX = 0;
 
     void Start()
     {
@@ -20,12 +18,7 @@ public class ZombieMovement : MonoBehaviour
 
     private void Update()
     {
-        startX = transform.position.x;
-        if (startX != endX)
-        {
-            direction = startX - endX;
-            endX = startX;
-        }
+        direction = player.position.x - transform.position.x;
     }
 
     void FixedUpdate()
@@ -51,13 +44,5 @@ public class ZombieMovement : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-
-        }
     }
 }
