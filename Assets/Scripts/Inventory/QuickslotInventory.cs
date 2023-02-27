@@ -9,7 +9,7 @@ public class QuickslotInventory : MonoBehaviour
     // Объект у которого дети являются слотами
     public Transform quickslotParent;
     [SerializeField]private InventoryManager inventoryManager;
-    public int currentQuickslotID = 0;
+    public int currentQuickslotID = 1;
     [SerializeField] private Sprite selectedSprite;
     [SerializeField] private Sprite notSelectedSprite;
     //public Text healthText;
@@ -34,7 +34,7 @@ public class QuickslotInventory : MonoBehaviour
                 currentQuickslotID++;
             }
             // Берем предыдущий слот и меняем его картинку на "выбранную"
-            quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().color =Color.white;
+            quickslotParent.GetChild(currentQuickslotID).GetComponent<Image>().sprite = selectedSprite;
             // Что то делаем с предметом:
 
         }
@@ -58,11 +58,11 @@ public class QuickslotInventory : MonoBehaviour
             
         }
         // Используем цифры
-    
+  
         for(int i = 0; i < quickslotParent.childCount; i++)
         {
             // если мы нажимаем на клавиши 1 по 5 то...
-            if (Input.GetKeyDown((i).ToString())) {
+            if (Input.GetKeyDown((i + 1).ToString())) {
                 // проверяем если наш выбранный слот равен слоту который у нас уже выбран, то
                 if (currentQuickslotID == i)
                 {
