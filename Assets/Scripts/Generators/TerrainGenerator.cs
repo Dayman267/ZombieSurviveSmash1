@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class TerrainGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject[] objects;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for(int i = Random.Range(5, 50), k = 0; k<i; k++)
+        {
+            float randPositionX = Random.Range(-12, 12);
+            float randPositionY = Random.Range(-12, 12);
+            Vector3 position = new Vector3(transform.position.x + randPositionX, transform.position.y + randPositionY, 0);
+            Instantiate(objects[Random.Range(0, objects.Length)], position, Quaternion.identity);
+        }
     }
 }

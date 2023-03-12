@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 5860847646406387390}
   - component: {fileID: 5860847646406387377}
   - component: {fileID: 5860847646406387376}
+  - component: {fileID: 314930452}
+  - component: {fileID: 314930453}
   m_Layer: 0
   m_Name: zombie
   m_TagString: Untagged
@@ -139,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  biteDistance: 3
 --- !u!114 &5860847646406387390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +170,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 100
+  m_AngularDrag: 100
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -187,3 +190,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7499ed93befff847bc4b9525b750c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  biteDistanse: 1.5
+  biteDamage: 1
+--- !u!70 &314930452
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860847646406387384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12214279, y: 0.5936514}
+  m_Size: {x: 0.5735831, y: 1.3068621}
+  m_Direction: 0
+--- !u!114 &314930453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5860847646406387384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817c6229c8dada54cb83582c6087f747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100

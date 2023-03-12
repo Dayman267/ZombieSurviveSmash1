@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4830895807616927425}
   - component: {fileID: 4830895807616927486}
   - component: {fileID: 6842270453239162722}
+  - component: {fileID: 1920316385}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Tilemap
@@ -6517,3 +6518,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25, y: 25}
   m_EdgeRadius: 0
+--- !u!114 &1920316385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830895807616927487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6f639c74a6e8045b32b5d37c92e818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 5860847646406387384, guid: c789ab0b1a9066e4a93d28f5003223eb, type: 3}
+  - {fileID: 549665357969777827, guid: 3ab43fc1013fd3e4d8d90e9620bdb744, type: 3}
+  - {fileID: 5301228893563301561, guid: 6b7fe4034207e104db512437dd4b427e, type: 3}
+  - {fileID: 1654714271375232712, guid: 3dad83dd2ee46a141a5ef19af1b079b9, type: 3}
+  - {fileID: 1337814726021108221, guid: b00e17a7ac111cf4fa217779e1dfd550, type: 3}
+  - {fileID: 1277746622209656632, guid: 898d7e898d1662c4cbd35c8b4b74927f, type: 3}
+  - {fileID: 4006085943149796525, guid: df8eeca30cce6ec47aedbfc42ee02f25, type: 3}
+  - {fileID: 528240988686387288, guid: 3aa9b8b0ef82a0d45ab202ab450a9291, type: 3}
+  - {fileID: 6357172586088708891, guid: 91da52dbb6f8ea240a609acbe486d07e, type: 3}
+  - {fileID: 4318815439811100647, guid: ae4a8ad9348c5f240a8fc23c3379170c, type: 3}
+  - {fileID: 6743028104106328745, guid: d935049ad52e6a44c98f039839b4868f, type: 3}

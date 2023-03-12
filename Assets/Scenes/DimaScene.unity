@@ -1218,10 +1218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap
       objectReference: {fileID: 0}
-    - target: {fileID: 4830895807616927487, guid: 2f7c81d141011094498fd0b8f756a7e0, type: 3}
-      propertyPath: m_TagString
-      value: Tilemap
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7c81d141011094498fd0b8f756a7e0, type: 3}
 --- !u!1001 &5301228893036275931
