@@ -141,7 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  biteDistance: 3
+  stoppingDistance: 1.5
+  findDistance: 12
 --- !u!114 &5860847646406387390
 MonoBehaviour:
   m_ObjectHideFlags: 0
