@@ -9,7 +9,7 @@ using TMPro;
 /// IDragHandler - Следит за тем не водим ли мы нажатую мышку по объекту
 public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    public InventorySlot oldSlot;
+    public InventorySlot1 oldSlot;
     public Transform player;
 
     private void Start()
@@ -17,7 +17,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         //ПОСТАВЬТЕ ТЭГ "PLAYER" НА ОБЪЕКТЕ ПЕРСОНАЖА!
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // Находим скрипт InventorySlot в слоте в иерархии
-        oldSlot = transform.GetComponentInParent<InventorySlot>();
+        oldSlot = transform.GetComponentInParent<InventorySlot1>();
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -61,10 +61,10 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             // убираем значения InventorySlot
             NullifySlotData();
         }
-        else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<InventorySlot>() != null)
+        else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<InventorySlot1>() != null)
         {
             //Перемещаем данные из одного слота в другой
-            ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<InventorySlot>());
+            ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<InventorySlot1>());
         }
        
     }
@@ -78,7 +78,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         oldSlot.iconGO.GetComponent<Image>().sprite = null;
         oldSlot.itemAmountText.text = "";
     }
-    void ExchangeSlotData(InventorySlot newSlot)
+    void ExchangeSlotData(InventorySlot1 newSlot)
     {
         // Временно храним данные newSlot в отдельных переменных
         ItemScriptableObject item = newSlot.item;

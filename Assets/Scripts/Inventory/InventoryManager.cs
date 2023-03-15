@@ -3,30 +3,35 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public GameObject UIBG;
+    public Transform RandomChestPanel;
     public Transform inventoryPanel;
+    public List<InventorySlot1> chestSlots = new List<InventorySlot1>();
     [SerializeField] private Transform firePoint;
-    public List<InventorySlot> slots = new List<InventorySlot>();
+    public List<InventorySlot1> slots = new List<InventorySlot1>();
     public bool isOpened;
     private Camera mainCamera;
     [SerializeField, Range(0, 5)] private float maxDistance = 1;
     public Collider2D collider;
-    //private void Awake()
-    //{
-    //    UIPanel.SetActive(true);
-    //}
+   
     void Start()
     {
         collider = GetComponent<CircleCollider2D>();
         mainCamera = Camera.main;
         for (int i = 0; i < inventoryPanel.childCount; i++)
         {
-            if (inventoryPanel.GetChild(i).GetComponent<InventorySlot>() != null)
+            if (inventoryPanel.GetChild(i).GetComponent<InventorySlot1>() != null)
             {
-                slots.Add(inventoryPanel.GetChild(i).GetComponent<InventorySlot>());
+                slots.Add(inventoryPanel.GetChild(i).GetComponent<InventorySlot1>());
             }
         }
-        UIBG.SetActive(false);
-        inventoryPanel.gameObject.SetActive(false);
+        for (int i = 0; i < RandomChestPanel.childCount; i++)
+        {
+            if (RandomChestPanel.GetChild(i).GetComponent<InventorySlot1>() != null)
+            {
+                chestSlots.Add(RandomChestPanel.GetChild(i).GetComponent<InventorySlot1>());
+            }
+        }
+        UnactiveUI();
     }
 
     void Update()
@@ -44,6 +49,12 @@ public class InventoryManager : MonoBehaviour
                 UIBG.SetActive(false);
                 inventoryPanel.gameObject.SetActive(false);
             }
+            //RandomChestPanel.gameObject.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ClearPanel(chestSlots);
+            UnactiveUI();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -58,36 +69,35 @@ public class InventoryManager : MonoBehaviour
     private void GrabItem()
     {
 
-        Debug.DrawRay(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, Color.red);
-        if (Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, LayerMask.GetMask("Objects")))
+        if (Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance))
         {
-            RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance, LayerMask.GetMask("Objects"));
+            
+            RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, ScreenToWorld(mainCamera, Input.mousePosition) - firePoint.position, maxDistance);
             if (_hit.collider.gameObject.GetComponent<Item>() != null)
             {
-                Debug.Log("jfjfjfj" + _hit.collider.gameObject);
-                AddItem(_hit.collider.gameObject.GetComponent<Item>().item, _hit.collider.gameObject.GetComponent<Item>().amount);
+                AddItem(_hit.collider.gameObject.GetComponent<Item>().item, _hit.collider.gameObject.GetComponent<Item>().amount,slots);
                 Destroy(_hit.collider.gameObject);
             }
+            else if (_hit.collider.gameObject.GetComponent<Chest>() != null) 
+            {
+                RandomChestPanel.gameObject.SetActive(true);
+                _hit.collider.gameObject.GetComponent<Chest>().isOpened = true;
+                for(int i = 0; i < _hit.collider.gameObject.GetComponent<Chest>().chestItems.Count; i++)
+                {
+                    AddItem(_hit.collider.gameObject.GetComponent<Chest>().chestItems[i],1, chestSlots);
+                    
+                }
+                
+            }
+            
         }
 
 
     }
-    //}
 
-    //public static bool Triggered() 
-    //{
-
-    //        Vector2 firePointToMousePoint = mainCamera.ScreenToWorldPoint(Input.mousePosition) - firePoint.position;
-    //        Debug.Log(Mathf.Abs((mainCamera.ScreenToWorldPoint(Input.mousePosition) - firePoint.position).magnitude));
-    //        if (Mathf.Abs(firePointToMousePoint.magnitude) <= maxDistance) 
-    //        {
-    //            return true;
-    //        }
-    //        else return false; 
-    //}
-    public void AddItem(ItemScriptableObject _item, int _amount)
+    public void AddItem(ItemScriptableObject _item, int _amount, List<InventorySlot1> inventoryPanelSlots)
     {
-        foreach (InventorySlot slot in slots)
+        foreach (InventorySlot1 slot in inventoryPanelSlots)
         {
            
             if (slot.item == _item)
@@ -102,7 +112,7 @@ public class InventoryManager : MonoBehaviour
             }
                 
         }
-        foreach (InventorySlot slot in slots)
+        foreach (InventorySlot1 slot in inventoryPanelSlots)
         {
             if (slot.isEmpty == true)
             {
@@ -112,14 +122,33 @@ public class InventoryManager : MonoBehaviour
                 slot.SetIcon(_item.icon);
                 slot.itemAmountText.text = _amount.ToString();
                 break;
-
             }
         }
     }
+
+    public void ClearPanel(List<InventorySlot1> inventoryPanelSlots)
+    {
+        foreach (InventorySlot1 slot in inventoryPanelSlots)
+        {
+            slot.item = null;
+            slot.amount = 0;
+            slot.isEmpty = true;
+            slot.iconGO = null;
+            slot.itemAmountText = null;
+        }
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(firePoint.position, maxDistance);
+    }
+
+    private void UnactiveUI() 
+    {
+        RandomChestPanel.gameObject.SetActive(false);
+        UIBG.SetActive(false);
+        inventoryPanel.gameObject.SetActive(false);
     }
 
 

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: TestItem 2
-  m_EditorClassIdentifier: Assembly-CSharp::NewBehaviourScript
-  ID: 0
-  DisplayName: Test obj 2
-  Description: 2
-  Icon: {fileID: 0}
-  maxStackSize: 1
+  m_Script: {fileID: 11500000, guid: 1119ad024bbe252408d7159642e99cee, type: 3}
+  m_Name: Pizza
+  m_EditorClassIdentifier: 
+  ID: 2
+  DisplayName: Pizza
+  Description: 
+  Icon: {fileID: -1792897676, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
+  maxStackSize: 10

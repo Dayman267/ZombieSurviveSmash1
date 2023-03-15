@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot1 : MonoBehaviour
 {
     public ItemScriptableObject item;
     public int amount;
