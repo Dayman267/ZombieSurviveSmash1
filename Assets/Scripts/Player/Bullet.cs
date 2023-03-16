@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.tag.Equals("Player"))
+        if (!collision.gameObject.tag.Equals("Player") && !collision.gameObject.tag.Equals("Tilemap"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 0.517f);

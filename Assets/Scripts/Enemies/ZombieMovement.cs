@@ -6,7 +6,8 @@ public class ZombieMovement : MonoBehaviour
 {
     [SerializeField, Range(0, 10)] private float speed;
     private Transform player;
-    [SerializeField, Range(0, 5)] private float biteDistance = 3;
+    [SerializeField, Range(0, 5)] private float stoppingDistance = 2;
+    [SerializeField, Range(0, 50)] private float findDistance = 8;
 
     private bool facingRight = true;
     private float direction;
@@ -23,7 +24,8 @@ public class ZombieMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, player.position) > biteDistance)
+        if (Vector2.Distance(transform.position, player.position) > stoppingDistance &&
+            Vector2.Distance(transform.position, player.position) < findDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
