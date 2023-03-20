@@ -6,12 +6,11 @@ public class ZombieMovement : MonoBehaviour
 {
     [SerializeField, Range(0, 10)] private float speed;
     private Transform player;
-    [SerializeField, Range(0, 5)] private float biteDistance = 3;
+    [SerializeField, Range(0, 5)] private float stoppingDistance = 2;
+    [SerializeField, Range(0, 50)] private float findDistance = 8;
 
     private bool facingRight = true;
     private float direction;
-    private float startX;
-    private float endX = 0;
 
     void Start()
     {
@@ -20,17 +19,13 @@ public class ZombieMovement : MonoBehaviour
 
     private void Update()
     {
-        startX = transform.position.x;
-        if (startX != endX)
-        {
-            direction = startX - endX;
-            endX = startX;
-        }
+        direction = player.position.x - transform.position.x;
     }
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, player.position) > biteDistance)
+        if (Vector2.Distance(transform.position, player.position) > stoppingDistance &&
+            Vector2.Distance(transform.position, player.position) < findDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
@@ -51,13 +46,5 @@ public class ZombieMovement : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-
-        }
     }
 }

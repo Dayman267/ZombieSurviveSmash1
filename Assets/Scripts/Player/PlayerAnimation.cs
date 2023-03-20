@@ -9,11 +9,25 @@ public class PlayerAnimation : MonoBehaviour
 
     private Vector2 direction;
 
+    private PlayerHealth health;
+
+    private void Start()
+    {
+        health = GetComponent<PlayerHealth>();
+    }
+
     void Update()
     {
         GetDirections();
-
-        if (direction == Vector2.zero) ChangeAnimation("idle");
+        if(health.GetHealth() <= 0)
+        {
+            ChangeAnimation("pers_death");
+            Destroy(anim, 0.8f);
+            Destroy(gameObject.GetComponent<PlayerMovement>());
+            Destroy(gameObject.GetComponent<PlayerHealth>());
+            Destroy(gameObject.GetComponent<PlayerAnimation>());
+        }
+        else if (direction == Vector2.zero) ChangeAnimation("idle");
         else if (direction == Vector2.up) ChangeAnimation("running_back");
         else ChangeAnimation("running_right");
     }
