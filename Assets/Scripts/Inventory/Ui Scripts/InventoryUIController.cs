@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 public class InventoryUIController : MonoBehaviour
 {
     public DynamicInventoryDisplay inventoryPanel;
+    private RectTransform UI_ControllerSize;
     private bool panelIsOpend = false;
 
     private void Awake()
     {
+        //Screen.currentResolution resolutions = ShimManager.screenShim.currentResolution;
+        UI_ControllerSize = this.GetComponent<RectTransform>();
+        UI_ControllerSize.sizeDelta = new Vector2(Display.main.systemWidth, Display.main.systemHeight);
         inventoryPanel.gameObject.SetActive(false);
     }
 

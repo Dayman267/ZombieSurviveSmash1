@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1119ad024bbe252408d7159642e99cee, type: 3}
-  m_Name: Shovel
+  m_Name: Sprite
   m_EditorClassIdentifier: 
-  ID: 5
-  DisplayName: Shovel
+  ID: 10
+  DisplayName: Sprite
   Description: 
-  Icon: {fileID: 1536224348, guid: 16cd10d11df81824590cc2f6cc347cda, type: 3}
-  maxStackSize: 1
-  type: Weapon
+  Icon: {fileID: 1374078710, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
+  maxStackSize: 2
+  type: Food
   itemPrice: 0
-  weight: 35
+  weight: 65

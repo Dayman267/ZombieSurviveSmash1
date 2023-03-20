@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Apple
   Description: 
   Icon: {fileID: -769943076, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
-  maxStackSize: 1
+  maxStackSize: 10
   type: Food
   itemPrice: 0
-  weight: 50
+  weight: 100
