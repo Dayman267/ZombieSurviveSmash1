@@ -19,4 +19,4 @@ MonoBehaviour:
   maxStackSize: 10
   type: Food
   itemPrice: 0
-  weight: 100
+  weight: 1000

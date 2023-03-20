@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Sprite
   Description: 
   Icon: {fileID: 1374078710, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
-  maxStackSize: 2
+  maxStackSize: 5
   type: Food
   itemPrice: 0
-  weight: 65
+  weight: 100

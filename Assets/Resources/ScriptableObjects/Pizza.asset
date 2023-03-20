@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: Pizza
   Description: 
   Icon: {fileID: -1792897676, guid: 09e0dd38fbbefcd4fa86b4271f5e484a, type: 3}
-  maxStackSize: 5
+  maxStackSize: 10
   type: Food
   itemPrice: 0
-  weight: 75
+  weight: 200

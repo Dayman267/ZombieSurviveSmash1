@@ -26,10 +26,11 @@ public class GenerateRandomItems : MonoBehaviour
     private void GenerateItems()
     {
         int randomArrayPos;
-        double randomNumber = Random.Range(0, (float)CalculateTotalWeight(lootItemsList));
 
-        for(int i = 0; i < Random.RandomRange(0, 15); i++)
+        double randomNumber;
+        for (int i = 0; i < Random.RandomRange(0, 15); i++)
         {
+            randomNumber = Random.Range(0, (float)CalculateTotalWeight(lootItemsList));
             foreach (var item in lootItemsList)
             {
                 if (randomNumber < item.weight)
