@@ -10,11 +10,11 @@ public class ZombieAnimation : MonoBehaviour
     private Vector2 startVector;
     private Vector2 endVector;
 
-    private Transform player;
+    /* */[SerializeField]private Transform player;
     [SerializeField, Range(0, 5)] private float biteDistanse = 1.5f;
 
-    private ZombieHealth health;
-    private PlayerHealth playerHealth;
+    /* */public ZombieHealth health;
+    /* */[SerializeField] private PlayerHealth playerHealth;
 
     [SerializeField] private float biteDamage;
 

@@ -14,7 +14,10 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
     }
-
+    private void Update()
+    {
+        FindObjectOfType<Canvas>().GetComponentInChildren<HealthBar>().health = this;
+    }
     public void TakeDamage(float damage)
     {
         health -= damage;

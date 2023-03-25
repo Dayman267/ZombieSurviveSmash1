@@ -8,7 +8,7 @@ public class TerrainGenerator : MonoBehaviour
 
     void Start()
     {
-        for(int i = Random.Range(5, 500), k = 0; k<i; k++)
+        for(int i = Random.Range(5, 50), k = 0; k<i; k++)
         {
             float randPositionX = Random.Range(-12, 12);
             float randPositionY = Random.Range(-12, 12);

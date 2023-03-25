@@ -10,8 +10,7 @@ public class StaticInventoryDisplay : InventoryDisplay
     protected override void Start()
     {
         base.Start();
-
-        if(inventoryHolder != null)
+        if (inventoryHolder != null)
         {
             inventorySystem = inventoryHolder.InventorySystem;
             inventorySystem.OnInventorySlotChanged += UpdateSlot;

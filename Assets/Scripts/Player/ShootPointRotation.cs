@@ -8,7 +8,10 @@ public class ShootPointRotation : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Camera cam;
     private Vector2 mousePos;
-
+    private void Start()
+    {
+        cam = FindObjectOfType<Camera>();
+    }
     private void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);

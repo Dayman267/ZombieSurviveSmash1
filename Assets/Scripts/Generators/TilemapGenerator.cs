@@ -14,6 +14,8 @@ public class TilemapGenerator : MonoBehaviour
 
     void Start()
     {
+        grid = FindObjectOfType<Grid>();
+        startingTilemap = FindObjectOfType<Tilemap>();
         spawnedTilemaps = new Tilemap[1000, 1000];
         spawnedTilemaps[500, 500] = startingTilemap;
         CheckAndSpawnTilemapsAround();

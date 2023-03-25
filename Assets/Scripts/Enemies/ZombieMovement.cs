@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieMovement : MonoBehaviour
 {
     [SerializeField, Range(0, 10)] private float speed;
-    private Transform player;
+    /* */[SerializeField]private Transform player;
     [SerializeField, Range(0, 5)] private float stoppingDistance = 2;
     [SerializeField, Range(0, 50)] private float findDistance = 8;
 
@@ -14,7 +14,7 @@ public class ZombieMovement : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     private void Update()

@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  player: {fileID: 6290037443307137744, guid: ec6656aa868bdce4daa871379a55535b, type: 3}
   stoppingDistance: 1.5
   findDistance: 12
 --- !u!114 &5860847646406387390
@@ -192,10 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7499ed93befff847bc4b9525b750c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6290037443307137744, guid: ec6656aa868bdce4daa871379a55535b, type: 3}
   biteDistanse: 1.5
-  health: {fileID: 314930453}
-  playerHealth: {fileID: 6290037443307137760, guid: ec6656aa868bdce4daa871379a55535b, type: 3}
   biteDamage: 1
 --- !u!70 &314930452
 CapsuleCollider2D:

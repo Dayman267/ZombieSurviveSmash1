@@ -5,6 +5,7 @@ public class CameraMovement : MonoBehaviour
     public Transform player;
     [SerializeField, Range(0, 10)] private float offset;
 
+
     void Update()
     {
         Vector3 temp = transform.position;

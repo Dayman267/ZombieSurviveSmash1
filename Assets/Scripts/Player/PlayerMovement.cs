@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     public float speed = 100f;
     private Vector2 direction;
@@ -12,32 +13,45 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        FindObjectOfType<Camera>().GetComponent<CameraMovement>().player = transform;
+        //health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        //FindObjectOfType<Canvas>().GetComponent<HealthBar>().health = 
     }
 
     void Update()
     {
-        direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
+        if (hasAuthority)
+        {
+            direction.x = Input.GetAxisRaw("Horizontal");
+            direction.y = Input.GetAxisRaw("Vertical");
+            //GameObject.FindGameObjectWithTag("Zombie").GetComponent<ZombieMovement>().player = transform;
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-        if(facingRight == false && direction.x > 0)
+        if (hasAuthority)
         {
-            Flip();
-        }
-        else if(facingRight == true && direction.x < 0)
-        {
-            Flip();
+            rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+            if (facingRight == false && direction.x > 0)
+            {
+                Flip();
+            }
+            else if (facingRight == true && direction.x < 0)
+            {
+                Flip();
+            }
         }
     }
 
     private void Flip()
     {
-        facingRight = !facingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
+        if (hasAuthority)
+        {
+            facingRight = !facingRight;
+            Vector3 scaler = transform.localScale;
+            scaler.x *= -1;
+            transform.localScale = scaler;
+        }
     }
 }
