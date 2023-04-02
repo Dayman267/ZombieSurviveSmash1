@@ -9,11 +9,9 @@ public class PlayerHealth : NetworkBehaviour
     private event Action _onDeath;
 
     public  Action OnDeath { get => _onDeath; set => _onDeath = value; }
-   
-    public float GetHealth()
-    {
-        return health;
-    }
+    public float Health => health;
+    public float MaxHealth => maxHealth;
+
 
     public void TakeDamage(float damage)
     {
@@ -37,11 +35,6 @@ public class PlayerHealth : NetworkBehaviour
         }
     }
 
-    private void Update()
-    {
-        FindObjectOfType<Canvas>().GetComponentInChildren<HealthBar>().health = this;
-    }
-
     private void HealthValidation()
     {
         if (health > 0) return;
@@ -55,6 +48,7 @@ public class PlayerHealth : NetworkBehaviour
 
     private void OnHealthChanged(float oldHealth, float newHealth)
     {
-        health = newHealth;
+        
     }
+
 }

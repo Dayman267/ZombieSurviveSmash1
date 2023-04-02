@@ -1,8 +1,9 @@
+using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieAnimation : MonoBehaviour
+public class ZombieAnimation : NetworkBehaviour
 {
     private Animator anim;
     private string currentAnimation;
@@ -74,5 +75,10 @@ public class ZombieAnimation : MonoBehaviour
         if (currentAnimation == animation) return;
         anim.Play(animation);
         currentAnimation = animation;
+    }
+
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
     }
 }

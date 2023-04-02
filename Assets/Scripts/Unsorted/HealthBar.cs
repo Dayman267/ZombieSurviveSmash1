@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] public PlayerHealth health;
+    public PlayerHealth health;
 
-    private void Update()
+    public void SetPlayerHealth(PlayerHealth playerHealth )
     {
-        bar.fillAmount = health.GetHealth()/100;
+        health = playerHealth;
     }
+    private void Update()
+    {   
+        if ( health != null )
+        bar.fillAmount = health.Health/health.MaxHealth;
+    }
+
 }
