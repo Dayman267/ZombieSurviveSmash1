@@ -8,6 +8,8 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
+        if (player == null) return;
+
         Vector3 temp = transform.position;
         temp.x = player.position.x + (Camera.main.ScreenToViewportPoint(Input.mousePosition).x - 0.5f) * offset;
         temp.y = player.position.y + (Camera.main.ScreenToViewportPoint(Input.mousePosition).y - 0.5f) * offset;

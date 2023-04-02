@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 884840449}
   - component: {fileID: -2909861332150000712}
   - component: {fileID: 365393080234282076}
+  - component: {fileID: -3894253495171601986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -341,6 +342,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   anim: {fileID: 1219550200282355881}
+  health: {fileID: 6290037443307137760}
 --- !u!58 &4023480416566268700
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -415,6 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc9e854b5783c94b8b48d6b768ab698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
   health: 0
   maxHealth: 100
 --- !u!114 &5501239494700343509
@@ -512,6 +517,24 @@ MonoBehaviour:
   syncInterval: 0.1
   clientAuthority: 1
   animator: {fileID: 1219550200282355881}
+--- !u!114 &-3894253495171601986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290037443307137746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daadcaceec2cd34f98b94dcc2fc32b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0.1
+  animation: {fileID: 8545392578210313988}
+  health: {fileID: 6290037443307137760}
+  movement: {fileID: 2389662066274642723}
 --- !u!1001 &5365464840511049889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -522,7 +545,7 @@ PrefabInstance:
     - target: {fileID: 83312489359662808, guid: d87a428abd1bdc7439fa3735da0950e2, type: 3}
       propertyPath: inventoryHolder
       value: 
-      objectReference: {fileID: 5501239494700343509, guid: e142071ac0763f449b7add4b162f50e4, type: 3}
+      objectReference: {fileID: 5501239494700343509}
     - target: {fileID: 121804779193960413, guid: d87a428abd1bdc7439fa3735da0950e2, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
@@ -594,7 +617,7 @@ PrefabInstance:
     - target: {fileID: 121804779522847597, guid: d87a428abd1bdc7439fa3735da0950e2, type: 3}
       propertyPath: health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6290037443307137760}
     - target: {fileID: 121804780083123768, guid: d87a428abd1bdc7439fa3735da0950e2, type: 3}
       propertyPath: m_Name
       value: Canvas

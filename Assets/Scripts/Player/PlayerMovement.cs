@@ -12,10 +12,7 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        FindObjectOfType<Camera>().GetComponent<CameraMovement>().player = transform;
-        //health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        //FindObjectOfType<Canvas>().GetComponent<HealthBar>().health = 
+        
     }
 
     void Update()

@@ -14,7 +14,7 @@ public class ZombieMovement : MonoBehaviour
 
     void Start()
     {
-       player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+       //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     private void Update()

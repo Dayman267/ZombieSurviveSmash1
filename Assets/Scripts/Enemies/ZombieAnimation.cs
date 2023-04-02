@@ -22,7 +22,7 @@ public class ZombieAnimation : MonoBehaviour
     {
         endVector = transform.position;
         anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         health = GetComponent<ZombieHealth>();
         playerHealth = FindObjectOfType<PlayerHealth>();
     }

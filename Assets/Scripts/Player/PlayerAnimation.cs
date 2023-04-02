@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-
-
-
+using System;
 
 public class PlayerAnimation : NetworkBehaviour
 {
@@ -13,11 +11,22 @@ public class PlayerAnimation : NetworkBehaviour
 
     private Vector2 direction;
 
-    private PlayerHealth health;
+    [SerializeField]private PlayerHealth health;
 
     private void Start()
     {
-        health = GetComponent<PlayerHealth>();
+        health.OnDeath += OnDeath;
+    }
+
+    private void OnDestroy()
+    {
+        health.OnDeath -= OnDeath;
+    }
+
+    private void OnDeath()
+    {
+        ChangeAnimation("pers_death");
+        Destroy(anim, 0.8f);
     }
 
     void Update()
@@ -25,15 +34,7 @@ public class PlayerAnimation : NetworkBehaviour
         if (hasAuthority)
         {
             GetDirections();
-            if (health.GetHealth() <= 0)
-            {
-                ChangeAnimation("pers_death");
-                Destroy(anim, 0.8f);
-                Destroy(gameObject.GetComponent<PlayerMovement>());
-                Destroy(gameObject.GetComponent<PlayerHealth>());
-                Destroy(gameObject.GetComponent<PlayerAnimation>());
-            }
-            else if (direction == Vector2.zero) ChangeAnimation("idle");
+            if (direction == Vector2.zero) ChangeAnimation("idle");
             else if (direction == Vector2.up) ChangeAnimation("running_back");
             else ChangeAnimation("running_right");
         }

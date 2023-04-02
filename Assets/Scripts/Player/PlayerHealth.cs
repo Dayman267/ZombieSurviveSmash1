@@ -1,26 +1,28 @@
+using Mirror;
+using System;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : NetworkBehaviour
 {
-    [SerializeField] private float health;
+    [SerializeField][SyncVar(hook = nameof(OnHealthChanged))] private float health;
     [SerializeField] private float maxHealth;
+    private event Action _onDeath;
 
+    public  Action OnDeath { get => _onDeath; set => _onDeath = value; }
+   
     public float GetHealth()
     {
         return health;
     }
 
-    private void Start()
-    {
-        health = maxHealth;
-    }
-    private void Update()
-    {
-        FindObjectOfType<Canvas>().GetComponentInChildren<HealthBar>().health = this;
-    }
     public void TakeDamage(float damage)
     {
         health -= damage;
+    }
+
+    public void Sync()
+    {
+        health = maxHealth;
     }
 
     public void RestoreHealth(float plusHealth)
@@ -33,5 +35,26 @@ public class PlayerHealth : MonoBehaviour
         {
             health += plusHealth;
         }
+    }
+
+    private void Update()
+    {
+        FindObjectOfType<Canvas>().GetComponentInChildren<HealthBar>().health = this;
+    }
+
+    private void HealthValidation()
+    {
+        if (health > 0) return;
+
+        _onDeath?.Invoke();
+        Destroy(gameObject.GetComponent<PlayerMovement>());
+        Destroy(gameObject.GetComponent<PlayerHealth>());
+        Destroy(gameObject.GetComponent<PlayerAnimation>());
+
+    }
+
+    private void OnHealthChanged(float oldHealth, float newHealth)
+    {
+        health = newHealth;
     }
 }
