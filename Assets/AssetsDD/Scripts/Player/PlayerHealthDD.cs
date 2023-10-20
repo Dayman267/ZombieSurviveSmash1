@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerHealthDD : MonoBehaviour
+public class PlayerHealthDD : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float healthPoints;
+    [SerializeField] private float maxHealthPoints = 100f;
+    
+    [SerializeField] private Image bar;
+    
+    private void Start()
     {
-        
+        bar = FindObjectOfType<HealthBar>().GetComponent<Image>();
+        if (isLocalPlayer)
+        {
+            healthPoints = maxHealthPoints;
+            bar.fillAmount = healthPoints/100;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void ChangeHealthBar(float points)
     {
-        
+        bar.fillAmount = points/100;
+    }
+    
+    public void RestoreHealth(float points)
+    {
+        healthPoints += points;
+        ChangeHealthBar(healthPoints);
+    }
+    
+    public void DamageToHealth(float damage)
+    {
+        healthPoints -= damage;
+        ChangeHealthBar(healthPoints);
+        if (healthPoints <= 0)
+        {
+            NetworkServer.Destroy(gameObject);
+        }
     }
 }
