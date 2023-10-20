@@ -21,7 +21,7 @@ public class BulletDD : NetworkBehaviour
     {
         if (inited && isServer)
         {
-            transform.Translate((target - transform.position).normalized * 0.04f);
+            transform.Translate((target - transform.position).normalized * 0.1f);
 
             foreach (var item in Physics2D.OverlapCircleAll(transform.position, 0.5f))
             {
