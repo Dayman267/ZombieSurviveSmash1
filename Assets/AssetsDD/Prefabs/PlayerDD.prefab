@@ -362,8 +362,6 @@ MonoBehaviour:
   syncInterval: 0
   staminaPoints: 0
   maxStaminaPoints: 100
-  waitSecAfterSpending: 2
-  waitSecBetweenRestoring: 0.1
 --- !u!114 &8326998008868046741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,8 +378,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   speed: 5
-  speedIncreaseFactor: 5
-  spendPoints: 1
+  speedIncreaseFactor: 2
+  spendPointsWhenRunning: 1
+  spendPointsWhenDodge: 30
+  dodgeDistance: 10
 --- !u!50 &3636411288201325930
 Rigidbody2D:
   serializedVersion: 4
