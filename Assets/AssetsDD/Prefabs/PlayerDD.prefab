@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8225221965672665883}
   - component: {fileID: 1927060367829034157}
   - component: {fileID: 3318007485608233512}
-  - component: {fileID: -6314245969662381162}
   - component: {fileID: -851686987909473945}
   - component: {fileID: -68459291517628862}
   - component: {fileID: 6222018527479484259}
@@ -277,22 +276,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!58 &-6314245969662381162
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229038163008187635}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!114 &-851686987909473945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,11 +360,9 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  speed: 5
-  speedIncreaseFactor: 2
-  spendPointsWhenRunning: 1
-  spendPointsWhenDodge: 30
-  dodgeDistance: 10
+  mask:
+    serializedVersion: 2
+    m_Bits: 1536
 --- !u!50 &3636411288201325930
 Rigidbody2D:
   serializedVersion: 4
