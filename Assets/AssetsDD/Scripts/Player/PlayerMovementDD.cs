@@ -1,8 +1,6 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Mirror;
-using Unity.VisualScripting;
 
 public class PlayerMovementDD : NetworkBehaviour
 {
@@ -47,19 +45,19 @@ public class PlayerMovementDD : NetworkBehaviour
         
         if (isDashing || isVaulting) return;
         
-        if (Dashing())
-        {
-            StartCoroutine(Dash());
-            playerStamina.SpendStamina(spendPointsWhenDashing);
-        }
-        else if (Vaulting())
+        if (Vaulting())
         {
             RaycastHit2D hit = 
                 Physics2D.CircleCast(transform.position, stayVaultRadius, 
                                 Vector2.zero, Mathf.Infinity, mask);
-            if (!hit || LayerMask.LayerToName(hit.collider.gameObject.layer) == "End") return;
+            if (isNotVaultable(hit)) return;
             StartCoroutine(Vault(hit.collider));
             playerStamina.SpendStamina(spendPointsWhenVaulting);
+        }
+        else if (Dashing())
+        {
+            StartCoroutine(Dash());
+            playerStamina.SpendStamina(spendPointsWhenDashing);
         }
         else if (Running())
         {
@@ -74,9 +72,17 @@ public class PlayerMovementDD : NetworkBehaviour
 
     private bool Running() => Input.GetKey(KeyCode.LeftShift) && playerStamina.GetStaminaPoints() > 0;
 
-    private bool Vaulting() => 
-        Input.GetKeyDown(KeyCode.Space) && rb.velocity.magnitude <= (direction * speed).magnitude && 
-        playerStamina.GetStaminaPoints() > 0;
+    private bool Vaulting()
+    {
+        if (!Input.GetKeyDown(KeyCode.Space) || !(playerStamina.GetStaminaPoints() > 0)) return false;
+        RaycastHit2D hit =
+            Physics2D.CircleCast(transform.position, stayVaultRadius,
+                Vector2.zero, Mathf.Infinity, mask);
+        return !isNotVaultable(hit);
+    }
+
+    private bool isNotVaultable(RaycastHit2D hit) =>
+        !hit || LayerMask.LayerToName(hit.collider.gameObject.layer) != "Vaultable";
 
     private bool Dashing() => 
         Input.GetKeyDown(KeyCode.Space) && direction != Vector2.zero && playerStamina.GetStaminaPoints() > 0;
@@ -105,7 +111,7 @@ public class PlayerMovementDD : NetworkBehaviour
         if (!isOwned || !isDashing) return;
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, stayVaultRadius, 
                 Vector2.zero, Mathf.Infinity, mask);
-        if (!hit || LayerMask.LayerToName(hit.collider.gameObject.layer) == "End") return;
+        if (isNotVaultable(hit)) return;
         StopCoroutine(Dash());
         isDashing = false;
         StartCoroutine(Vault(hit.collider));
