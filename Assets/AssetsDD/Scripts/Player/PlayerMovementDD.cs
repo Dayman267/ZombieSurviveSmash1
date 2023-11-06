@@ -70,7 +70,7 @@ public class PlayerMovementDD : NetworkBehaviour
         }
     }
 
-    private bool Running() => Input.GetKey(KeyCode.LeftShift) && playerStamina.GetStaminaPoints() > 0;
+    private bool Running() => Input.GetKey(KeyCode.LeftShift) && direction != Vector2.zero && playerStamina.GetStaminaPoints() > 0;
 
     private bool Vaulting()
     {

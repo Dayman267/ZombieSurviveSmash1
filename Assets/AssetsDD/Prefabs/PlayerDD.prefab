@@ -291,6 +291,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  offset: 10
 --- !u!114 &-68459291517628862
 MonoBehaviour:
   m_ObjectHideFlags: 0
