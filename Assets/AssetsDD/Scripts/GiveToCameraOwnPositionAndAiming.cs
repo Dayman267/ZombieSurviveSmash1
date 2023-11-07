@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Mirror;
 
-public class GiveToCameraOwnPosition : NetworkBehaviour
+public class GiveToCameraOwnPositionAndAiming : NetworkBehaviour
 {
     private Camera cam;
     [SerializeField, Range(0, 10)] private float offset;

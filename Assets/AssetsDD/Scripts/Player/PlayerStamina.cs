@@ -11,8 +11,8 @@ public class PlayerStamina : NetworkBehaviour
     private Image bar;
     
     private bool isSpentRecently = false;
-    /*[SerializeField]*/ private float waitSecAfterSpending = 2f;
-    /*[SerializeField]*/ private float waitSecBetweenRestoring = 0.1f;
+    /*[SerializeField]*/ private float waitSecAfterSpending = 1f;
+    /*[SerializeField]*/ private float waitSecBetweenRestoring = 0.001f;
     
     private void Start()
     {
