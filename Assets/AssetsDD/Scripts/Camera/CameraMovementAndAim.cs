@@ -1,0 +1,26 @@
+// using UnityEngine;
+// using Mirror;
+//
+// public class CameraMovementAndAim : NetworkBehaviour
+// {
+//     public Transform player;
+//     [SerializeField, Range(0, 10)] private float offset;
+//
+//     private void Update()
+//     {
+//         if (isLocalPlayer)
+//         {
+//             if (Input.GetKey(KeyCode.Mouse1))
+//             {
+//                 Vector3 temp = transform.position;
+//                 temp.x = player.position.x + (Camera.main.ScreenToViewportPoint(Input.mousePosition).x - 0.5f) * offset;
+//                 temp.y = player.position.y + (Camera.main.ScreenToViewportPoint(Input.mousePosition).y - 0.5f) * offset;
+//                 transform.position = temp;
+//             }
+//             else
+//             {
+//                 transform.position = player.position;
+//             }
+//         }
+//     }
+// }

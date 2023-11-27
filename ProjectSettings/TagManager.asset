@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Tilemap
   - Canvas
+  - Obstacle
+  - Vaultable
+  - TileObjects
+  - StartingTileObject
+  - TileObject
+  - TileObjectsGenerator
   layers:
   - Default
   - TransparentFX
@@ -16,8 +22,8 @@ TagManager:
   - Player
   - Objects
   - Interactable
-  - 
-  - 
+  - Vaultable
+  - End
   - 
   - 
   - 

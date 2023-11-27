@@ -10,7 +10,7 @@ public class Player : NetworkBehaviour //даем системе понять, �
     public int Health;
     public GameObject[] HealthGos;
 
-
+    
     SyncList<Vector3> _SyncVector3Vars = new SyncList<Vector3>(); //В случае SyncList не нужно ставить SyncVar и задавать метод, это делается иначе
     public List<Vector3> Vector3Vars;
 
@@ -135,7 +135,7 @@ public class Player : NetworkBehaviour //даем системе понять, �
                 }
             case SyncList<Vector3>.Operation.OP_SET:
                 {
-
+                    
                     break;
                 }
         }
