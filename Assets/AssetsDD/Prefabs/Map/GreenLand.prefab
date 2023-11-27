@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4759164248731266161}
   m_Layer: 0
   m_Name: GreenLand
-  m_TagString: Untagged
+  m_TagString: TileObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,10 @@ TagManager:
   - Canvas
   - Obstacle
   - Vaultable
+  - TileObjects
+  - StartingTileObject
+  - TileObject
+  - TileObjectsGenerator
   layers:
   - Default
   - TransparentFX

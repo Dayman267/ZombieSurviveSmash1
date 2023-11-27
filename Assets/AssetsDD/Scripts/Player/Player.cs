@@ -135,7 +135,7 @@ public class Player : NetworkBehaviour //даем системе понять, �
                 }
             case SyncList<Vector3>.Operation.OP_SET:
                 {
-
+                    
                     break;
                 }
         }
