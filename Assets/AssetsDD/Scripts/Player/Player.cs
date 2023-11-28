@@ -46,7 +46,7 @@ public class Player : NetworkBehaviour //даем системе понять, �
                     CmdChangeVector3Vars(transform.position);
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Vector3 pos = Input.mousePosition;
                 pos.z = 10f;
