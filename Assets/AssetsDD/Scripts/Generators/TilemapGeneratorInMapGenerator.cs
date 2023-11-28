@@ -39,9 +39,9 @@ public class TilemapGeneratorInMapGenerator : NetworkBehaviour
         }
 
         bool isFinished = false;
-        for (int x = 1; x < width-1 && !isFinished; x++)
+        for (int x = 1; x < width && !isFinished; x++)
         {
-            for (int y = 1; y < height-1 && !isFinished; y++)
+            for (int y = 1; y < height && !isFinished; y++)
             {
                 if (gameObjectsToSpawn[x, y] == -1) continue;
     
@@ -142,9 +142,9 @@ public class TilemapGeneratorInMapGenerator : NetworkBehaviour
             }
             if (positionX < maxX && gameObjectsToSpawn[(int)positionX + 1, (int)positionY] == -1) 
             {
-                gameObjectsToSpawn[(int)positionX + 1, (int)positionY -1] = Random.Range(0, 3);
-                GameObject prefab = Instantiate(gameObjectPrefabs[gameObjectsToSpawn[(int)positionX + 1,(int)positionY-1]],
-                    new Vector3((int)positionX + 1-width/2, (int)positionY-1-height/2, 0) * objectSize,
+                gameObjectsToSpawn[(int)positionX + 1, (int)positionY] = Random.Range(0, 3);
+                GameObject prefab = Instantiate(gameObjectPrefabs[gameObjectsToSpawn[(int)positionX + 1,(int)positionY]],
+                    new Vector3((int)positionX + 1-width/2, (int)positionY-height/2, 0) * objectSize,
                     Quaternion.identity, parentToSet.transform);
                 NetworkServer.Spawn(prefab);
             }

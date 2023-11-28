@@ -3,7 +3,6 @@ using Mirror;
 
 public class TilemapGeneratorDD : NetworkBehaviour
 {
-    //public GameObject mapGenerator;
     private TilemapGeneratorInMapGenerator tilemapGeneratorInMapGenerator;
 
     public override void OnStartClient()
