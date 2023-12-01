@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using Random = UnityEngine.Random;
@@ -23,11 +21,11 @@ public class TilemapGeneratorInMapGenerator : NetworkBehaviour
         {
             objectSize = (int)gameObjectPrefabs[0].transform.localScale.x;
             gameObjectsToSpawn = new int[width, height];
-            CheckAndSpawnGameObjectsAround();
+            SpawnFirstNineObjects();
         }
     }
     
-    private void CheckAndSpawnGameObjectsAround()
+    private void SpawnFirstNineObjects()
     {
         for (int x = 0; x < width; x++)
         {
@@ -84,11 +82,6 @@ public class TilemapGeneratorInMapGenerator : NetworkBehaviour
             }
         }
         
-        SpawnObjectsAround();
-    }
-    
-    void SpawnObjectsAround()
-    {
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
