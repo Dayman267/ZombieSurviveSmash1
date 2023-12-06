@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
 
-public class TilemapGeneratorDD : NetworkBehaviour
+public class TilemapGeneratorInPlayer : NetworkBehaviour
 {
     private TilemapGeneratorInMapGenerator tilemapGeneratorInMapGenerator;
 

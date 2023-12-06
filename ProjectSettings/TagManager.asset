@@ -12,6 +12,8 @@ TagManager:
   - StartingTileObject
   - TileObject
   - TileObjectsGenerator
+  - GeneratedObjects
+  - ObjectsGenerator
   layers:
   - Default
   - TransparentFX

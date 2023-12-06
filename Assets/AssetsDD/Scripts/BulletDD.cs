@@ -30,7 +30,7 @@ public class BulletDD : NetworkBehaviour
                 {
                     if (player.netId != owner)
                     {
-                        player.ChangeHealthValue(player.Health - 1); //отнимаем одну жизнь по аналогии с примером SyncVar
+                        //player.ChangeHealthValue(player.Health - 1); //отнимаем одну жизнь по аналогии с примером SyncVar
                         NetworkServer.Destroy(gameObject); //уничтожаем пулю
                     }
                 }
