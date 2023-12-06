@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
@@ -10,15 +8,11 @@ public class ObjectsGeneratorInTile : NetworkBehaviour
     public void Start()
     {
         if (!isServer) return;
+        
         objectsGenerator = GameObject.
             FindWithTag("ObjectsGenerator").
             GetComponent<ObjectsGenerator>();
-        CmdGenerateObjects(transform.position.x, transform.position.y);
+        objectsGenerator.GenerateObjects(transform.position.x, transform.position.y);
         Destroy(this);
-    }
-
-    void CmdGenerateObjects(float startX, float startY)
-    {
-        objectsGenerator.GenerateObjects(startX, startY);
     }
 }

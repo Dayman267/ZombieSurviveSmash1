@@ -9,8 +9,8 @@ public class ObjectsGenerator : NetworkBehaviour
     
     public GameObject[] gameObjectPrefabs;
     
-    private int minObjectsPerTile = 1;
-    private int maxObjectsPerTile = 6;
+    [SerializeField] private int minObjectsPerTile = 1;
+    [SerializeField] private int maxObjectsPerTile = 1;
 
     private float objectSize;
     
