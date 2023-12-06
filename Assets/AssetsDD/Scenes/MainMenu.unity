@@ -610,6 +610,7 @@ GameObject:
   - component: {fileID: 778227294}
   - component: {fileID: 778227293}
   - component: {fileID: 778227292}
+  - component: {fileID: 778227295}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -683,6 +684,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778227295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778227291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &916966483
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +850,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916966483}
   m_CullTransparentMesh: 1
---- !u!1 &1197854577
+--- !u!1 &1070456592
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -824,10 +858,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1197854581}
-  - component: {fileID: 1197854580}
-  - component: {fileID: 1197854579}
-  - component: {fileID: 1197854582}
+  - component: {fileID: 1070456596}
+  - component: {fileID: 1070456595}
+  - component: {fileID: 1070456594}
+  - component: {fileID: 1070456593}
   m_Layer: 0
   m_Name: NetMan
   m_TagString: Untagged
@@ -835,13 +869,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1197854579
+--- !u!114 &1070456593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197854577}
+  m_GameObject: {fileID: 1070456592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetX: 0
+  offsetY: 0
+--- !u!114 &1070456594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070456592}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
@@ -864,13 +912,13 @@ MonoBehaviour:
   debugLog: 0
   statisticsGUI: 0
   statisticsLog: 0
---- !u!114 &1197854580
+--- !u!114 &1070456595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197854577}
+  m_GameObject: {fileID: 1070456592}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 905c3fcb6139a0a45a42105685039c1a, type: 3}
@@ -883,7 +931,7 @@ MonoBehaviour:
   sendRate: 60
   offlineScene: Assets/AssetsDD/Scenes/MainMenu.unity
   onlineScene: Assets/AssetsDD/Scenes/DimaSceneDD.unity
-  transport: {fileID: 1197854579}
+  transport: {fileID: 1070456594}
   networkAddress: localhost
   maxConnections: 100
   disconnectInactiveConnections: 0
@@ -894,6 +942,11 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 1442347732591047989, guid: 2410cc435f579c540952c994352fc250, type: 3}
+  - {fileID: 6563329485340419503, guid: 4754870d8e5c64542b18a219d3c42f09, type: 3}
+  - {fileID: 2623426356240027631, guid: 32a6ce15a0fe04b46a88538a4184fd98, type: 3}
+  - {fileID: 8674804159131479171, guid: 1af4a5987d1b9f54984938502900fafe, type: 3}
+  - {fileID: 789786517987296191, guid: 3b9e753862bcbd444a6f49f1f510ac4f, type: 3}
+  - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32
@@ -907,13 +960,13 @@ MonoBehaviour:
     deliveryTimeEmaDuration: 2
   connectionQualityInterval: 3
   timeInterpolationGui: 0
---- !u!4 &1197854581
+--- !u!4 &1070456596
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197854577}
+  m_GameObject: {fileID: 1070456592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.16975243, y: -0.035440356, z: -3820.2876}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -922,18 +975,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1197854582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1197854577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d09f5c8bf2f4747b7a9284ef5d9ce2a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1675752844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1197854580}
+      - m_Target: {fileID: 1070456595}
         m_TargetAssemblyTypeName: Mirror.NetworkManager, Mirror
         m_MethodName: StartHost
         m_Mode: 1
@@ -1362,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48e5eef6052c484c8135184fc461d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkManager: {fileID: 1197854580}
+  networkManager: {fileID: 1070456595}
 --- !u!4 &1852718631
 Transform:
   m_ObjectHideFlags: 0
