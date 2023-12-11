@@ -395,6 +395,7 @@ MonoBehaviour:
   parentToSet: {fileID: 955487136}
   gameObjectPrefabs:
   - {fileID: 789786517987296191, guid: 3b9e753862bcbd444a6f49f1f510ac4f, type: 3}
+  - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   minObjectsPerTile: 1
   maxObjectsPerTile: 6
 --- !u!114 &223511068
