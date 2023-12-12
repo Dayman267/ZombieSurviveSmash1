@@ -14,6 +14,7 @@ TagManager:
   - TileObjectsGenerator
   - GeneratedObjects
   - ObjectsGenerator
+  - Enemy
   layers:
   - Default
   - TransparentFX
