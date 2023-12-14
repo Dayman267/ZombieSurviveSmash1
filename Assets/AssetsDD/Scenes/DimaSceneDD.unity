@@ -393,12 +393,19 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   parentToSet: {fileID: 955487136}
+  sizeTemplate: {fileID: 6563329485340419503, guid: 4754870d8e5c64542b18a219d3c42f09, type: 3}
   gameObjectPrefabs:
   - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   - {fileID: 789786517987296191, guid: 3b9e753862bcbd444a6f49f1f510ac4f, type: 3}
   - {fileID: 8104640544633949872, guid: d1b5440721fbcef4e966eb3a1f30fa03, type: 3}
+  enemiesPrefabs:
+  - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
+  - {fileID: 8104640544633949872, guid: d1b5440721fbcef4e966eb3a1f30fa03, type: 3}
   minObjectsPerTile: 1
   maxObjectsPerTile: 6
+  minEnemiesPerSpawn: 1
+  maxEnemiesPerSpawn: 6
+  maxCubeRadius: 10
 --- !u!114 &223511068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,6 +1354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725205750}
   - component: {fileID: 1725205751}
+  - component: {fileID: 1725205752}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -1448,6 +1456,22 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!58 &1725205752
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725205747}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.9
 --- !u!1 &1859193984
 GameObject:
   m_ObjectHideFlags: 0
