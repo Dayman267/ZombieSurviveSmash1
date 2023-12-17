@@ -59,7 +59,7 @@ public class PlayerShield : NetworkBehaviour
         }
     }
     
-    private void DamageToShield(float damage)
+    public void DamageToShield(float damage)
     {
         isDamagedRecently = true;
         if (shieldPoints - damage >= 0)
