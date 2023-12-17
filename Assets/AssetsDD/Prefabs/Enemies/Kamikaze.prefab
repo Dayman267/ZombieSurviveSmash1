@@ -64,7 +64,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  damage: 0
+  damage: 1
 --- !u!1 &8104640544633949872
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 6332649566498452512}
   m_Layer: 0
   m_Name: Kamikaze
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
