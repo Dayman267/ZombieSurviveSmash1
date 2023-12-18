@@ -17,6 +17,8 @@ TagManager:
   - Enemy
   - PointsManager
   - Lighter
+  - Teleport
+  - StartButton
   layers:
   - Default
   - TransparentFX
