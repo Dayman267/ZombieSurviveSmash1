@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Mirror;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class PlayerMovementDD : NetworkBehaviour
 {
@@ -30,6 +31,13 @@ public class PlayerMovementDD : NetworkBehaviour
 
     private void Start()
     {
+        // #if !UNITY_EDITOR
+        //     Application.Quit();
+        // #endif
+        // #if UNITY_EDITOR
+        //     EditorApplication.isPlaying = false;
+        // #endif
+        
         if (!isOwned) return;
         rb = GetComponent<Rigidbody2D>();
         playerStamina = GetComponent<PlayerStamina>();
