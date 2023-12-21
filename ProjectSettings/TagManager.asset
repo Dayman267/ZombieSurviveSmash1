@@ -53,6 +53,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Dirt
+    uniqueID: 85442285
+    locked: 0
   - name: tilemap
     uniqueID: 2194650419
     locked: 0

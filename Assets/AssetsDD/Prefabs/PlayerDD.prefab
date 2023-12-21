@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: -6577353940019067062}
   - component: {fileID: 4979618058780701608}
   - component: {fileID: 8664942455739096861}
+  - component: {fileID: -9067048864646332572}
   m_Layer: 0
   m_Name: PlayerDD
   m_TagString: Player
@@ -86,8 +87,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 468227261
-  m_SortingLayer: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -314,6 +315,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  sceneName: DimaSceneDD
   waitForSecondsBetweenSpawning: 2
 --- !u!114 &8664942455739096861
 MonoBehaviour:
@@ -394,6 +396,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &-9067048864646332572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229038163008187635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8b31f1573204f4882c97ec75deea16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  sortingOrderBase: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &758179143481562036
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +528,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  sceneName: DimaSceneDD
 --- !u!58 &2127304314012602509
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -600,6 +621,7 @@ GameObject:
   - component: {fileID: 2308565878978388935}
   - component: {fileID: 4101773732773758516}
   - component: {fileID: 7680863352236695618}
+  - component: {fileID: 635415214760347573}
   m_Layer: 0
   m_Name: Lighter
   m_TagString: Lighter
@@ -779,3 +801,19 @@ PolygonCollider2D:
     - - {x: -17.65, y: 38}
       - {x: 0, y: 0}
       - {x: 17.65, y: 38}
+--- !u!114 &635415214760347573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623453891790860465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49e198bc584f80408e9938ee4d244fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  sceneName: DimaSceneDD

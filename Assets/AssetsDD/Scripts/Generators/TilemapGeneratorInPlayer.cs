@@ -1,14 +1,25 @@
+using System;
 using UnityEngine;
 using Mirror;
+using UnityEngine.SceneManagement;
 
 public class TilemapGeneratorInPlayer : NetworkBehaviour
 {
     private TilemapGeneratorInMapGenerator tilemapGeneratorInMapGenerator;
     private PointsManager manager;
+    
+    [SerializeField] private string sceneName = "DimaSceneDD";
 
     public override void OnStartClient()
     {
         base.OnStartClient();
+        
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name != sceneName)
+        {
+            Destroy(this);
+            return;
+        }
         
         tilemapGeneratorInMapGenerator = GameObject.
             FindWithTag("TileObjectsGenerator").
