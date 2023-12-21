@@ -487,14 +487,17 @@ MonoBehaviour:
   parentToSet: {fileID: 955487136}
   sizeTemplate: {fileID: 6563329485340419503, guid: 4754870d8e5c64542b18a219d3c42f09, type: 3}
   gameObjectPrefabs:
-  - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   - {fileID: 789786517987296191, guid: 3b9e753862bcbd444a6f49f1f510ac4f, type: 3}
-  - {fileID: 8104640544633949872, guid: d1b5440721fbcef4e966eb3a1f30fa03, type: 3}
+  - {fileID: 789786517987296191, guid: 9ef2d339a1d701e4ca308a8b608f1028, type: 3}
+  - {fileID: 789786517987296191, guid: 93cf54fa4b14e14419418365006059b8, type: 3}
+  - {fileID: 789786517987296191, guid: 9d4aa36cc955baf4c90632e857f48a61, type: 3}
+  - {fileID: 789786517987296191, guid: 087eb571b7d355440b75824f330e9374, type: 3}
+  - {fileID: 789786517987296191, guid: d647f17211b0dca4fbdc0158c43703ee, type: 3}
   enemiesPrefabs:
   - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   - {fileID: 8104640544633949872, guid: d1b5440721fbcef4e966eb3a1f30fa03, type: 3}
-  minObjectsPerTile: 1
-  maxObjectsPerTile: 6
+  minObjectsPerTile: 10
+  maxObjectsPerTile: 50
   minEnemiesPerSpawn: 0
   maxEnemiesPerSpawn: 0
   maxCubeRadius: 10
@@ -1861,6 +1864,10 @@ MonoBehaviour:
   - {fileID: 789786517987296191, guid: 3b9e753862bcbd444a6f49f1f510ac4f, type: 3}
   - {fileID: 2278417833204257431, guid: b583ca4f29de8d749a6c0c335d39ef41, type: 3}
   - {fileID: 8104640544633949872, guid: d1b5440721fbcef4e966eb3a1f30fa03, type: 3}
+  - {fileID: 789786517987296191, guid: 9ef2d339a1d701e4ca308a8b608f1028, type: 3}
+  - {fileID: 789786517987296191, guid: 93cf54fa4b14e14419418365006059b8, type: 3}
+  - {fileID: 789786517987296191, guid: 9d4aa36cc955baf4c90632e857f48a61, type: 3}
+  - {fileID: 789786517987296191, guid: 087eb571b7d355440b75824f330e9374, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     bufferLimit: 32

@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 278
     height: 629
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 941bffff5421ffff9428ffffe245ffffee5affffc086ffff4288ffff588fffffb090ffffe6acffff7eb4ffff5ab5fffffec6ffffe2c7ffff24fbffff2474000094d00000
+      m_ExpandedIDs: 8e89ffff92a5ffff8aa6ffff0edfffff5ae3ffffc2e6ffff8aeaffffa8efffffbef2ffff36f6ffffbcf9ffff92b600005cb7000006bc0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -526,9 +526,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.49510977, y: 0.21822615, z: -0.017524816}
+    m_Target: {x: 0.98366696, y: 0.40330446, z: -9.897585}
     speed: 2
-    m_Value: {x: 0.49510977, y: 0.21822615, z: -0.017524816}
+    m_Value: {x: 0.98366696, y: 0.40330446, z: -9.897585}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.589112
+    m_Target: 8.783796
     speed: 2
-    m_Value: 7.589112
+    m_Value: 8.783796
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -674,22 +674,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AssetsDD/Prefabs
+    - Assets/AssetsDD/Prefabs/Obstacles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/AssetsDD/Prefabs
+  - Assets/AssetsDD/Prefabs/Obstacles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\ZombieSurviveSmash1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 9a780000
-    m_LastClickedID: 30874
-    m_ExpandedIDs: 0000000018780000387800009e780000788200002a8c000000ca9a3bffffff7f
+    m_SelectedIDs: 80910000
+    m_LastClickedID: 37248
+    m_ExpandedIDs: 00000000c67c0000c87c0000ca7c0000cc7c0000ce7c0000e87c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,7 +717,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000018780000387800009e780000788200002a8c000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000c67c0000c87c0000ca7c0000cc7c0000ce7c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -820,8 +820,8 @@ MonoBehaviour:
     y: 0
     width: 458
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
