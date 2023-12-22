@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/AssetsDD/Scenes/MainMenu.unity
     guid: 8fac61c9031715b4a868ffe0514755c4
   - enabled: 1
-    path: Assets/AssetsDD/Scenes/Lobby.unity
-    guid: d6ffc5b18c341b34587d4f7dd9560923
-  - enabled: 1
-    path: Assets/AssetsDD/Scenes/TestScene.unity
-    guid: 9e597c87dbe8711418856c2f496e9d91
-  - enabled: 0
     path: Assets/AssetsDD/Scenes/DimaSceneDD.unity
     guid: 5851e80f84a99da4ea922123cb145c59
+  - enabled: 0
+    path: Assets/AssetsDD/Scenes/Lobby.unity
+    guid: d6ffc5b18c341b34587d4f7dd9560923
+  - enabled: 0
+    path: Assets/AssetsDD/Scenes/TestScene.unity
+    guid: 9e597c87dbe8711418856c2f496e9d91
   m_configObjects: {}
