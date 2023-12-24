@@ -7,7 +7,7 @@ using Mirror;
 
 public class TeleportInPlayer : NetworkBehaviour
 {
-    public Button bt;
+    private Button bt;
 
     private void Start()
     {

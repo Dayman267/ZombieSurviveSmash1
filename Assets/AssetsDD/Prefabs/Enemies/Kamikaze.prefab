@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8398743948497055257}
   m_Layer: 0
   m_Name: Damager
-  m_TagString: Untagged
+  m_TagString: SpecialEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 5809588994548491754}
   - component: {fileID: 3449712768104820879}
   - component: {fileID: 6332649566498452512}
+  - component: {fileID: 8167397654602491}
   m_Layer: 0
   m_Name: Kamikaze
   m_TagString: Enemy
@@ -259,3 +260,19 @@ MonoBehaviour:
   positionSensitivity: 0.01
   rotationSensitivity: 0.01
   scaleSensitivity: 0.01
+--- !u!114 &8167397654602491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104640544633949872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5a21656dfe53c42953279e7b077dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  health: 50

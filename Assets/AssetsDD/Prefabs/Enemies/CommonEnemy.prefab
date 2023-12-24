@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2224317000752291543}
   - component: {fileID: 2614293606085979252}
   - component: {fileID: 8425695441225147267}
+  - component: {fileID: 1984659345553149555}
   m_Layer: 0
   m_Name: CommonEnemy
   m_TagString: Enemy
@@ -222,6 +223,22 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5773587}
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
+--- !u!114 &1984659345553149555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278417833204257431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5a21656dfe53c42953279e7b077dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  health: 100
 --- !u!1 &3879619075291603069
 GameObject:
   m_ObjectHideFlags: 0
