@@ -9,14 +9,16 @@ public class PointsManager : NetworkBehaviour
 {
     [SyncVar] public int darkEnergyPoints;
     [SyncVar] public int darkEnergyPointsToAccess;
-    public int iterator;
-    [SerializeField] private int seconds;
+    public int pointsPerTime;
+    public int secondsBetweenAward;
 
     [SyncVar] public int firstFibonacci;
     [SyncVar] public int secondFibonacci;
 
     public Text[] darkEnergyText;
     public Text[] solidMaterialText;
+
+    [SyncVar] public int counterICanEnter;
 
     private void Start()
     {
@@ -34,15 +36,22 @@ public class PointsManager : NetworkBehaviour
             darkEnergyPointsToAccess = firstFibonacci + secondFibonacci;
             secondFibonacci = firstFibonacci;
             firstFibonacci = darkEnergyPointsToAccess;
+            counterICanEnter += 1;
         }
+    }
+
+    [ClientRpc]
+    public void RpcSubtractOneCounterICanEnter()
+    {
+        counterICanEnter -= 1;
     }
 
     private IEnumerator DarkEnergyTimeIncreaser()
     {
         while (true)
         {
-            RpcAddDarkEnergyPoints(iterator);
-            yield return new WaitForSeconds(seconds);
+            RpcAddDarkEnergyPoints(pointsPerTime);
+            yield return new WaitForSeconds(secondsBetweenAward);
         }
     }
 }

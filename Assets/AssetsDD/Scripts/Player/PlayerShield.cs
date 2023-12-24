@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Mirror;
-using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class PlayerShield : NetworkBehaviour

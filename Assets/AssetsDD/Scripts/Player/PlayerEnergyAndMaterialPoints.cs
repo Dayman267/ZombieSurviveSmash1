@@ -3,7 +3,7 @@ using Mirror;
 
 public class PlayerEnergyAndMaterialPoints : NetworkBehaviour
 {
-    public PointsManager manager;
+    private PointsManager manager;
     private int solidMaterial;
 
     private void Start()
