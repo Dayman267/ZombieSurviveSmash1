@@ -7,7 +7,6 @@ public class WeaponHolder : NetworkBehaviour
     private Image bar;
     private Image barBackground;
 
-    //private int equippedWeapon;
     private int selectedWeapon;
 
     private void Start()
@@ -23,10 +22,9 @@ public class WeaponHolder : NetworkBehaviour
         int equippedWeapon = selectedWeapon;
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) selectedWeapon = 0;
-
         if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2) selectedWeapon = 1;
-        
         if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3) selectedWeapon = 2;
+        if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4) selectedWeapon = 3;
         
         if(equippedWeapon != selectedWeapon) SelectWeapon();
     }

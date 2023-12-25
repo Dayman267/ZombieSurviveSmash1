@@ -7,7 +7,7 @@ public class PlayerHealthDD : NetworkBehaviour
     [SerializeField] private float healthPoints;
     [SerializeField] private float maxHealthPoints = 100f;
     
-    [SerializeField] private Image bar;
+    private Image bar;
     
     private void Start()
     {

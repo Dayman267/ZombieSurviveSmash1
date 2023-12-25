@@ -239,6 +239,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   health: 100
+  darkEnergyPointsPerDeath: 20
+  minSolidMaterialPointsPerDeath: 1
+  maxSolidMaterialPointsPerDeath: 3
+  isDead: 0
 --- !u!1 &3879619075291603069
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,5 +307,5 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  damage: 1
+  damage: 5
   waitSecAfterDamaging: 1

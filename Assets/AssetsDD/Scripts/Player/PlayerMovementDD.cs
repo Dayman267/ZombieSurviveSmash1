@@ -9,25 +9,28 @@ public class PlayerMovementDD : NetworkBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
     
-    private float speed = 5f;
-    private float speedIncreaseFactor = 1.5f;
+    [Header("Running")]
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speedIncreaseFactor = 1.5f;
+    [SerializeField] private float spendPointsWhenRunning = 0.3f;
 
     private bool isDashing;
-    private float dashSpeed = 7f;
-    private float dashTime = 0.5f;
+    [Header("Dashing")]
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashTime = 0.5f;
+    [SerializeField] private float spendPointsWhenDashing = 10f;
 
     private bool isVaulting;
-    private float vaultSpeed = 6f;
-    private float vaultTime = 0.2f;
-    private float stayVaultRadius = 0.6f;
+    [Header("Vaulting")]
+    [SerializeField] private float vaultSpeed = 6f;
+    [SerializeField] private float vaultTime = 0.2f;
+    [SerializeField] private float stayVaultRadius = 0.6f;
+    [SerializeField] private float spendPointsWhenVaulting = 20f;
     
     [SerializeField]
     private LayerMask mask;
     
     private PlayerStamina playerStamina;
-    private float spendPointsWhenRunning = 0.3f;
-    private float spendPointsWhenDashing = 10f;
-    private float spendPointsWhenVaulting = 20f;
 
     private void Start()
     {

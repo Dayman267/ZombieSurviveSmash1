@@ -47,12 +47,14 @@ public class PistolBullet : NetworkBehaviour
         if(other.isTrigger && !other.gameObject.CompareTag("SpecialEnemy")) return;
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyHealth>().TakeDamage(damage);
+            if(other.GetComponent<EnemyHealth>().isDead) return;
+            other.GetComponent<EnemyHealth>().TakeDamage(damage, owner);
             NetworkServer.Destroy(gameObject);
         }
         else if(other.gameObject.CompareTag("SpecialEnemy"))
         {
-            other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
+            if(other.GetComponentInParent<EnemyHealth>().isDead) return;
+            other.GetComponentInParent<EnemyHealth>().TakeDamage(damage, owner);
             NetworkServer.Destroy(gameObject);
         }
         else if(other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Wall"))

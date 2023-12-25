@@ -305,7 +305,7 @@ MonoBehaviour:
   syncInterval: 0
   darkEnergyPoints: 0
   darkEnergyPointsToAccess: 100
-  pointsPerTime: 15
+  pointsPerTime: 1
   secondsBetweenAward: 1
   firstFibonacci: 0
   secondFibonacci: 0
@@ -319,16 +319,6 @@ MonoBehaviour:
   - {fileID: 258161069}
   - {fileID: 935736454}
   - {fileID: 1516890656}
-  solidMaterialText:
-  - {fileID: 1411595808}
-  - {fileID: 584581670}
-  - {fileID: 410433931}
-  - {fileID: 1461629946}
-  - {fileID: 1789101510}
-  - {fileID: 481612817}
-  - {fileID: 996056871}
-  - {fileID: 1746576213}
-  - {fileID: 611992432}
   counterICanEnter: 0
 --- !u!4 &133403662
 Transform:
@@ -924,7 +914,7 @@ GameObject:
   - component: {fileID: 410433931}
   m_Layer: 5
   m_Name: shadow3
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1127,7 +1117,7 @@ GameObject:
   - component: {fileID: 481612817}
   m_Layer: 5
   m_Name: shadow6
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1287,7 +1277,7 @@ GameObject:
   - component: {fileID: 584581670}
   m_Layer: 5
   m_Name: shadow2
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1367,7 +1357,7 @@ GameObject:
   - component: {fileID: 611992432}
   m_Layer: 5
   m_Name: original
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1935,6 +1925,7 @@ MonoBehaviour:
   - {fileID: 1442347732591047989, guid: 2410cc435f579c540952c994352fc250, type: 3}
   - {fileID: 6193377888271114544, guid: be8efd59cc5b3ed4dadc3522a9d0a2eb, type: 3}
   - {fileID: 6193377888271114544, guid: 24956ca95ae178b4999180f100fb7a62, type: 3}
+  - {fileID: 1442347732591047989, guid: 55752d353683e4e46b1ad8db93039e29, type: 3}
   - {fileID: 6563329485340419503, guid: 4754870d8e5c64542b18a219d3c42f09, type: 3}
   - {fileID: 2623426356240027631, guid: 32a6ce15a0fe04b46a88538a4184fd98, type: 3}
   - {fileID: 8674804159131479171, guid: 1af4a5987d1b9f54984938502900fafe, type: 3}
@@ -2242,7 +2233,7 @@ GameObject:
   - component: {fileID: 996056871}
   m_Layer: 5
   m_Name: shadow7
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2543,7 +2534,7 @@ GameObject:
   - component: {fileID: 1411595808}
   m_Layer: 5
   m_Name: shadow
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2703,7 +2694,7 @@ GameObject:
   - component: {fileID: 1461629946}
   m_Layer: 5
   m_Name: shadow4
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3372,7 +3363,7 @@ GameObject:
   - component: {fileID: 1746576213}
   m_Layer: 5
   m_Name: shadow8
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3452,7 +3443,7 @@ GameObject:
   - component: {fileID: 1789101510}
   m_Layer: 5
   m_Name: shadow5
-  m_TagString: Untagged
+  m_TagString: SolidMaterial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
