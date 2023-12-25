@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Mirror;
 
@@ -56,7 +55,7 @@ public class PistolBullet : NetworkBehaviour
             other.GetComponentInParent<EnemyHealth>().TakeDamage(damage);
             NetworkServer.Destroy(gameObject);
         }
-        else if(other.gameObject.CompareTag("Obstacle"))
+        else if(other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Wall"))
         {
             NetworkServer.Destroy(gameObject);
         }

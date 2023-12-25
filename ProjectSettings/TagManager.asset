@@ -23,6 +23,7 @@ TagManager:
   - BulletObjects
   - BulletGenerator
   - SpecialEnemy
+  - Wall
   layers:
   - Default
   - TransparentFX

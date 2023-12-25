@@ -1934,6 +1934,7 @@ MonoBehaviour:
   spawnPrefabs:
   - {fileID: 1442347732591047989, guid: 2410cc435f579c540952c994352fc250, type: 3}
   - {fileID: 6193377888271114544, guid: be8efd59cc5b3ed4dadc3522a9d0a2eb, type: 3}
+  - {fileID: 6193377888271114544, guid: 24956ca95ae178b4999180f100fb7a62, type: 3}
   - {fileID: 6563329485340419503, guid: 4754870d8e5c64542b18a219d3c42f09, type: 3}
   - {fileID: 2623426356240027631, guid: 32a6ce15a0fe04b46a88538a4184fd98, type: 3}
   - {fileID: 8674804159131479171, guid: 1af4a5987d1b9f54984938502900fafe, type: 3}
@@ -2195,6 +2196,8 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  shotgunPrefab: {fileID: 6193377888271114544, guid: 24956ca95ae178b4999180f100fb7a62, type: 3}
+  percentage: 0.05
 --- !u!1 &955487136
 GameObject:
   m_ObjectHideFlags: 0

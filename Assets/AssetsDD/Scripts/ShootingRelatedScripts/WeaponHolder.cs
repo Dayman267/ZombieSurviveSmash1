@@ -26,6 +26,8 @@ public class WeaponHolder : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2) selectedWeapon = 1;
         
+        if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3) selectedWeapon = 2;
+        
         if(equippedWeapon != selectedWeapon) SelectWeapon();
     }
 
