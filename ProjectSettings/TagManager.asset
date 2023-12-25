@@ -24,6 +24,7 @@ TagManager:
   - BulletGenerator
   - SpecialEnemy
   - Wall
+  - SolidMaterial
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
 
-public class MachineGunBullet : NetworkBehaviour
+public class SniperBullet : NetworkBehaviour
 {
     uint owner;
     bool inited;
@@ -49,13 +49,11 @@ public class MachineGunBullet : NetworkBehaviour
         {
             if(other.GetComponent<EnemyHealth>().isDead) return;
             other.GetComponent<EnemyHealth>().TakeDamage(damage, owner);
-            NetworkServer.Destroy(gameObject);
         }
         else if(other.gameObject.CompareTag("SpecialEnemy"))
         {
             if(other.GetComponentInParent<EnemyHealth>().isDead) return;
             other.GetComponentInParent<EnemyHealth>().TakeDamage(damage, owner);
-            NetworkServer.Destroy(gameObject);
         }
         else if(other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Wall"))
         {

@@ -205,7 +205,6 @@ MonoBehaviour:
   syncInterval: 0
   healthPoints: 0
   maxHealthPoints: 100
-  bar: {fileID: 0}
 --- !u!114 &-9067395842223349217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +222,8 @@ MonoBehaviour:
   syncInterval: 0
   staminaPoints: 0
   maxStaminaPoints: 100
+  waitSecAfterSpending: 1
+  waitSecBetweenRestoring: 0.03
 --- !u!114 &8326998008868046741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +239,16 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  speed: 5
+  speedIncreaseFactor: 1.5
+  spendPointsWhenRunning: 0.5
+  dashSpeed: 10
+  dashTime: 0.5
+  spendPointsWhenDashing: 25
+  vaultSpeed: 8
+  vaultTime: 0.2
+  stayVaultRadius: 0.6
+  spendPointsWhenVaulting: 20
   mask:
     serializedVersion: 2
     m_Bits: 1536
@@ -528,6 +539,7 @@ MonoBehaviour:
   syncInterval: 0
   bullet: {fileID: 6193377888271114544, guid: 24956ca95ae178b4999180f100fb7a62, type: 3}
   secBetweenShots: 0.8
+  bulletsCount: 15
 --- !u!1 &4355338241993033425
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +621,7 @@ Transform:
   - {fileID: 4512127987060515323}
   - {fileID: 6700468153453503837}
   - {fileID: 1755887820119280460}
+  - {fileID: 3777022872592754455}
   m_Father: {fileID: 229038163008187644}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -708,6 +721,7 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
+  solidMaterialText: []
 --- !u!1 &5805465583125117384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,3 +1028,52 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   sceneName: DimaSceneDD
+--- !u!1 &7312977599082992701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3777022872592754455}
+  - component: {fileID: 7755407187309903536}
+  m_Layer: 0
+  m_Name: SniperRifle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3777022872592754455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312977599082992701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6558626542705128386}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7755407187309903536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7312977599082992701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43508ffb665e57843a53fa1cecb53b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  bullet: {fileID: 1442347732591047989, guid: 55752d353683e4e46b1ad8db93039e29, type: 3}
+  secBetweenShots: 1.5

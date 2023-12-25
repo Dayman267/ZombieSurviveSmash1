@@ -16,7 +16,7 @@ public class PointsManager : NetworkBehaviour
     [SyncVar] public int secondFibonacci;
 
     public Text[] darkEnergyText;
-    public Text[] solidMaterialText;
+    //public Text[] solidMaterialText;
 
     [SyncVar] public int counterICanEnter;
 

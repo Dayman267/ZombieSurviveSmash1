@@ -1,12 +1,12 @@
 using UnityEngine;
 using Mirror;
 
-public class Shotgun : NetworkBehaviour
+public class SniperRifle : NetworkBehaviour
 {
     public GameObject bullet;
+
     private float secLeft;
     public float secBetweenShots = 0.1f;
-    public int bulletsCount = 5;
 
     private void Update()
     {
@@ -16,11 +16,8 @@ public class Shotgun : NetworkBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                for (int i = 0; i < bulletsCount; i++)
-                {
-                    CmdSpawnBullet(netId, Camera.main.ScreenToWorldPoint(Input.mousePosition));
-                    secLeft = secBetweenShots;
-                }
+                CmdSpawnBullet(netId, Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                secLeft = secBetweenShots;
             }
         }
         else
@@ -34,6 +31,6 @@ public class Shotgun : NetworkBehaviour
     {
         GameObject bulletGo = Instantiate(bullet, transform.position, Quaternion.identity);
         NetworkServer.Spawn(bulletGo);
-        bulletGo.GetComponent<ShotgunBullet>().Init(owner, mousePos);
+        bulletGo.GetComponent<SniperBullet>().Init(owner, mousePos);
     }
 }
