@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 279
     height: 629
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 98b2f7ff3ab3f7ffb2b6f7ff5a36f8fffc36f8ff743af8ffb460f8ff5661f8ffce64f8ff3619f9ffe219f9ff5a1df9ff72dbf9ff18dcf9ff90dff9ff8c1cfaff321dfaffaa20faffec51faff9252faff0a56faff047afaffa87afaff2e7efaff98aefaff3eaffaffb6b2faffbee3faff64e4faffdce7faff64effaff0af0faff82f3faffdc18fbff8219fbfffa1cfbff504efbfff44efbff6c52fbff2457fbffc857fbff405bfbffd8fdfbff7cfefbfff401fcff40ccfcff86ccfcff74f8fcffbaf8fcff524ffdff984ffdff06c3fdff4cc3fdfff8f0ffff8af8ffff24fbffff4c7a0000ae7a0000ac7b00003e7c0000747c0000ec7c00006c520100
+      m_ExpandedIDs: 242dffff2a7dffff24fbffffbaa00000f0a0000050a100006ab30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,16 +519,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.34786668, y: 0.19301817, z: 0.052390266}
+    m_Target: {x: 0.7678087, y: 2.4870505, z: -1.1062651}
     speed: 2
-    m_Value: {x: -0.34786668, y: 0.19301817, z: 0.052390266}
+    m_Value: {x: 0.7678087, y: 2.4870505, z: -1.1062651}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.418849
+    m_Target: 9.974358
     speed: 2
-    m_Value: 7.418849
+    m_Value: 9.974358
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -625,14 +625,14 @@ MonoBehaviour:
     y: 629
     width: 1461
     height: 318
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -674,22 +674,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/AssetsDD/Prefabs/Bullets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/AssetsDD/Prefabs/Bullets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\ZombieSurviveSmash1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 02790000
-    m_LastClickedID: 30978
-    m_ExpandedIDs: 00000000027900000479000006790000087900000a79000000ca9a3bffffff7f
+    m_SelectedIDs: b0990000
+    m_LastClickedID: 39344
+    m_ExpandedIDs: 000000000479000006790000087900000a7900000c7900001a96000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,7 +717,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000027900000479000006790000087900000a79000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000000479000006790000087900000a7900000c79000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000928b00008a7d0000a06100009c5e0000d46100000662000002620000f06000000c6100000a6000001862000096750000c675000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -820,8 +820,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

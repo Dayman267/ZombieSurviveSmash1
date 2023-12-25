@@ -1,7 +1,7 @@
 using UnityEngine;
 using Mirror;
 
-public class MachineGunBullet : NetworkBehaviour
+public class ShotgunBullet : NetworkBehaviour
 {
     uint owner;
     bool inited;
@@ -11,6 +11,7 @@ public class MachineGunBullet : NetworkBehaviour
     [SerializeField] private float speed = 12f;
     [SerializeField] private float rateOfFire = 1f;
     [SerializeField] private int damage = 30;
+    [SerializeField] private float percentage = 0.1f;
     [SerializeField] private float reloadSec = 3f;
     
     [SerializeField] private float destroyTime = 2f;
@@ -27,6 +28,8 @@ public class MachineGunBullet : NetworkBehaviour
         rb = GetComponent<Rigidbody2D>();
         direction = mousePos - transform.position;
         direction.Normalize();
+        direction.x += Random.Range(-percentage, percentage);
+        direction.y += Random.Range(-percentage, percentage);
         this.owner = owner;
         inited = true;
     }
