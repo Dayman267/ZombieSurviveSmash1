@@ -4,16 +4,9 @@ using Mirror;
 public class Shotgun : NetworkBehaviour
 {
     public GameObject bullet;
-    //private BulletGenerator generator;
     private float secLeft;
     public float secBetweenShots = 0.1f;
     public int bulletsCount = 5;
-
-    private void Start()
-    {
-        if(!isLocalPlayer) return;
-        //generator = GameObject.FindWithTag("BulletGenerator").GetComponent<BulletGenerator>();
-    }
 
     private void Update()
     {

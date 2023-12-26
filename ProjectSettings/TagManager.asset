@@ -24,6 +24,9 @@ TagManager:
   - BulletGenerator
   - SpecialEnemy
   - Wall
+  - SolidMaterial
+  - Inventory
+  - ItemPickUpPlayer
   layers:
   - Default
   - TransparentFX

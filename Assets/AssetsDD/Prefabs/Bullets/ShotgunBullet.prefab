@@ -229,7 +229,7 @@ MonoBehaviour:
   syncInterval: 0
   speed: 20
   rateOfFire: 1
-  damage: 30
+  damage: 15
   percentage: 0.2
   reloadSec: 3
   destroyTime: 1.5

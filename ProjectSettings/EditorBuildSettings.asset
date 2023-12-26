@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/AssetsDD/Scenes/Hub.unity
     guid: 8142fbade1bcdf84ca20f55eec52eaa1
   - enabled: 1
-    path: Assets/AssetsDD/Scenes/DimaSceneDD.unity
+    path: Assets/AssetsDD/Scenes/MainSceneDD.unity
     guid: 5851e80f84a99da4ea922123cb145c59
   - enabled: 0
     path: Assets/AssetsDD/Scenes/Lobby.unity
