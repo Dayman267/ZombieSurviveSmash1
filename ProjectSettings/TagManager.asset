@@ -6,7 +6,25 @@ TagManager:
   tags:
   - Tilemap
   - Canvas
-  - Inventory
+  - Obstacle
+  - Vaultable
+  - TileObjects
+  - StartingTileObject
+  - TileObject
+  - TileObjectsGenerator
+  - GeneratedObjects
+  - ObjectsGenerator
+  - Enemy
+  - PointsManager
+  - Lighter
+  - Teleport
+  - StartButton
+  - ReloadBar
+  - BulletObjects
+  - BulletGenerator
+  - SpecialEnemy
+  - Wall
+  - SolidMaterial
   layers:
   - Default
   - TransparentFX
@@ -17,8 +35,8 @@ TagManager:
   - Player
   - Objects
   - Interactable
-  - 
-  - 
+  - Vaultable
+  - End
   - 
   - 
   - 
@@ -41,6 +59,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Dirt
+    uniqueID: 85442285
+    locked: 0
   - name: tilemap
     uniqueID: 2194650419
     locked: 0

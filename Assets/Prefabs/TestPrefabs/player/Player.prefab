@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 6290037443307137760}
   - component: {fileID: 5501239494700343509}
   - component: {fileID: 1790453836122067876}
+  - component: {fileID: 6998451156623840947}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -359,6 +360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8b31f1573204f4882c97ec75deea16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   sortingOrderBase: 5000
   offset: 5.5
   runOnlyOnce: 0
@@ -439,3 +443,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   InteractionPointRadius: 0.3
+--- !u!114 &6998451156623840947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290037443307137746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 1554001249
+  serverOnly: 0
+  visible: 0
+  hasSpawned: 0

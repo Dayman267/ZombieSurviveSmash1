@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Mirror;
-using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class PlayerShield : NetworkBehaviour
@@ -59,7 +58,7 @@ public class PlayerShield : NetworkBehaviour
         }
     }
     
-    private void DamageToShield(float damage)
+    public void DamageToShield(float damage)
     {
         isDamagedRecently = true;
         if (shieldPoints - damage >= 0)
