@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Inventory.Model;
+using Mirror;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : NetworkBehaviour
 {
     [field: SerializeField] public ItemSO InventoryItem { get; private set; }
     [field: SerializeField] public int Quantity { get; set; } = 1;
@@ -15,13 +16,14 @@ public class Item : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
-
+    
+    [ClientRpc]
     public void DestroyItem()
     {
         GetComponent<Collider2D>().enabled = false;
         StartCoroutine(AnimateItemPickUp());
     }
-
+    
     private IEnumerator AnimateItemPickUp()
     {
         audioSource.Play();
@@ -37,6 +39,6 @@ public class Item : MonoBehaviour
         }
 
         transform.localScale = endScale;
-        Destroy(gameObject);
+       NetworkServer.Destroy(gameObject);
     }
 }

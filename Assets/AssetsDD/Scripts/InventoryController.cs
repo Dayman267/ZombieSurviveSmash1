@@ -86,11 +86,11 @@ namespace Inventory
                 _inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quanity));
             }
             
-            IAddToQuickSlot itemForQuickSlot = inventoryItem.item as IAddToQuickSlot;
+            /*IAddToQuickSlot itemForQuickSlot = inventoryItem.item as IAddToQuickSlot;
             if (itemForQuickSlot != null)
             {
                 _inventoryUI.AddAction("AddToQuickSlot", () => AddItemToQuickSlot(itemIndex));
-            }
+            }*/
             
         }
 
@@ -101,12 +101,12 @@ namespace Inventory
             audioSource.PlayOneShot(dropClip);
         }
         
-        private void AddItemToQuickSlot(int itemIndex)
+        /*private void AddItemToQuickSlot(int itemIndex)
         {
             
            
             
-        }
+        }*/
 
         public void PerformAction(int itemIndex)
         {
