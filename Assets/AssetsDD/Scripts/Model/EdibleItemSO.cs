@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 namespace Inventory.Model
 {
     [CreateAssetMenu]
-    public class EdibleItemSO : ItemSO, IDestroybleItem, IItemAction
+    public class EdibleItemSO : ItemSO, IDestroybleItem, IItemAction, IAddToQuickSlot
     {
         [SerializeField] private List<ModifierData> modifierData = new List<ModifierData>();
 
@@ -22,6 +22,11 @@ namespace Inventory.Model
             }
             return true;
         }
+    }
+
+    public interface IAddToQuickSlot
+    {
+        
     }
 
     public interface IDestroybleItem
