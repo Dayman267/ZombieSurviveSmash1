@@ -5720,7 +5720,7 @@ MonoBehaviour:
   gameObjectPrefabs:
   - {fileID: 6563329485340419503, guid: ecc1fd22df5371540b7dfe102e5c4f1f, type: 3}
   - {fileID: 8674804159131479171, guid: 44dc4488cff27a64d9839f0b855b4d74, type: 3}
-  - {fileID: 2623426356240027631, guid: 1af4a5987d1b9f54984938502900fafe, type: 3}
+  - {fileID: 2623426356240027631, guid: 32a6ce15a0fe04b46a88538a4184fd98, type: 3}
   - {fileID: 8674804159131479171, guid: 3a57c0f640dea4a438d73e0f0f36b134, type: 3}
 --- !u!1001 &2050969195
 PrefabInstance:
