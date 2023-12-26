@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -19,13 +17,8 @@ public class ItemPickUp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var inventory = collision.GetComponent<InventoryHolder>();
-        if (!inventory) return; 
+        if (!inventory) return;
 
-        if (inventory.InventorySystem.AddToInventory(ItemData, 1))
-        {
-            Destroy(this.gameObject);
-        }
+        if (inventory.InventorySystem.AddToInventory(ItemData, 1)) Destroy(gameObject);
     }
-
-   
 }

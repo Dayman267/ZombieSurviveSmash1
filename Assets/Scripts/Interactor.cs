@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,23 +14,21 @@ public class Interactor : MonoBehaviour
         var colliders = Physics2D.OverlapCircleAll(InteractionPoint.position, InteractionPointRadius, InteractionLayer);
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            for (int i = 0; i < colliders.Length; i++)
+            for (var i = 0; i < colliders.Length; i++)
             {
                 var interactable = colliders[i].GetComponent<IInteractable>();
 
-                if(interactable != null) StartInteraction(interactable);
-            } 
-        }
+                if (interactable != null) StartInteraction(interactable);
+            }
     }
 
-    void StartInteraction(IInteractable interactable)
+    private void StartInteraction(IInteractable interactable)
     {
-        interactable.Interact(this, out bool interactSuccessful);
+        interactable.Interact(this, out var interactSuccessful);
         IsInteracting = true;
     }
 
-    void EndInteraction()
+    private void EndInteraction()
     {
         IsInteracting = false;
     }

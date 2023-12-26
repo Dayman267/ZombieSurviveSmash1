@@ -1,5 +1,5 @@
-using UnityEngine;
 using Mirror;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class WeaponHolder : NetworkBehaviour
@@ -12,32 +12,32 @@ public class WeaponHolder : NetworkBehaviour
 
     private void Start()
     {
-        if(!isLocalPlayer) return;
+        if (!isLocalPlayer) return;
         SelectWeapon();
     }
 
     private void Update()
     {
-        if(!isLocalPlayer) return;
+        if (!isLocalPlayer) return;
 
-        int equippedWeapon = selectedWeapon;
+        var equippedWeapon = selectedWeapon;
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) selectedWeapon = 0;
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && transform.childCount >= 2) selectedWeapon = 1;
-        
+
         if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3) selectedWeapon = 2;
-        
-        if(equippedWeapon != selectedWeapon) SelectWeapon();
+
+        if (equippedWeapon != selectedWeapon) SelectWeapon();
     }
 
-    void SelectWeapon()
+    private void SelectWeapon()
     {
-        if(!isLocalPlayer) return;
-        int i = 0;
+        if (!isLocalPlayer) return;
+        var i = 0;
         foreach (Transform weapon in transform)
         {
-            if(i==selectedWeapon)
+            if (i == selectedWeapon)
                 weapon.gameObject.SetActive(true);
             else
                 weapon.gameObject.SetActive(false);

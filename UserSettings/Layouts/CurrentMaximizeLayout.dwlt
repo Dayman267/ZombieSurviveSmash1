@@ -45,7 +45,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 279
+    x: -1641
     y: 73
     width: 1180
     height: 608
@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 279
     height: 629
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1920
     y: 73
     width: 278
     height: 608
@@ -228,21 +228,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 242dffff2a7dffff24fbffffbaa00000f0a0000050a100006ab30000
+      m_ExpandedIDs: 48dffeffeedffeff92e3feff96e3feff28fafeff40fffeff7a1dffff5e21ffffc622ffffda28ffff082affff642bffff2249ffffcc49ffff5c4dffff764dffff7a4dffff5a53ffff2a5bfffffc90ffffa291ffff4a95ffff5295ffff18b3ffff92b6ffffdab9ffff00bcffff0ec2ffffe0c3ffff8ac4ffff2ec8ffff32c8ffff80ceffff3ed0ffff8ad4ffff30d5ffffc0d8ffffdad8ffffded8ffff82e0ffff2ce1ffffbce4ffffd6e4ffffdae4ffff84ebffffd6ecffff02f2ffff9cf3ffff5af6ffff48f7ffff0c780000527e000070820000c082000004830000c0ae000004af0000b4c1000004df000052df000096df000070ea000076f00000e2f1000014ff00004000010084000100ba0701004c080100563b01002e470100724701007c470100d64901004a4d01008e4d0100984d0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Workbenches
+        m_OriginalName: Workbenches
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 65300
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -299,7 +299,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 279
+    x: -1641
     y: 73
     width: 1180
     height: 608
@@ -526,9 +526,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.7678087, y: 2.4870505, z: -1.1062651}
+    m_Target: {x: 3.545781, y: 0.30031613, z: 0.10381899}
     speed: 2
-    m_Value: {x: 0.7678087, y: 2.4870505, z: -1.1062651}
+    m_Value: {x: 3.545781, y: 0.30031613, z: 0.10381899}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.974358
+    m_Target: 3.4597301
     speed: 2
-    m_Value: 9.974358
+    m_Value: 3.4597301
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -653,7 +653,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1920
     y: 702
     width: 1460
     height: 297
@@ -674,22 +674,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AssetsDD/Prefabs/Bullets
+    - Assets/AssetsDD/IMenu/Lobby
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/AssetsDD/Prefabs/Bullets
+  - Assets/AssetsDD/IMenu/Lobby
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Unity\UnityProjects\ZombieSurviveSmash1
+  m_LastProjectPath: C:\Users\Vitaliy\Documents\GitHub\ZombieSurviveSmash1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: b0990000
-    m_LastClickedID: 39344
-    m_ExpandedIDs: 000000000479000006790000087900000a7900000c7900001a96000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 27}
+    m_SelectedIDs: 08990000
+    m_LastClickedID: 39176
+    m_ExpandedIDs: 000000007e79000080790000827900004a7b0000507b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,7 +717,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000479000006790000087900000a7900000c79000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000007e7900008079000082790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -793,7 +793,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: -1920
     y: 702
     width: 1460
     height: 297
@@ -820,8 +820,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -848,7 +848,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1461
+    x: -459
     y: 73
     width: 458
     height: 926

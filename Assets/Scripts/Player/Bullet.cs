@@ -9,13 +9,12 @@ public class Bullet : MonoBehaviour
     {
         if (!collision.gameObject.tag.Equals("Player") && !collision.gameObject.tag.Equals("Tilemap"))
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            var effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 0.517f);
             Destroy(gameObject);
         }
+
         if (collision.gameObject.GetComponent<ZombieHealth>())
-        {
             collision.gameObject.GetComponent<ZombieHealth>().TakeDamage(damage);
-        }
     }
 }

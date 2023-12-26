@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class InventorySlot_UI : MonoBehaviour
 {
@@ -13,14 +11,14 @@ public class InventorySlot_UI : MonoBehaviour
     private Button button;
 
     public InventorySlot AssignedInventorySlot => assignedInventorySlot;
-    public InventoryDisplay ParentDisplay {get; private set;}
+    public InventoryDisplay ParentDisplay { get; private set; }
 
     private void Awake()
     {
         ClearSlot();
         button = GetComponent<Button>();
         button?.onClick.AddListener(OnUISlotClick);
-        
+
         ParentDisplay = transform.parent.GetComponent<InventoryDisplay>();
     }
 
@@ -52,13 +50,11 @@ public class InventorySlot_UI : MonoBehaviour
         {
             ClearSlot();
         }
-
-        
     }
 
     public void UpdateUISlot()
     {
-        if(assignedInventorySlot != null) UpdateUISlot(assignedInventorySlot);  
+        if (assignedInventorySlot != null) UpdateUISlot(assignedInventorySlot);
     }
 
     public void OnUISlotClick()

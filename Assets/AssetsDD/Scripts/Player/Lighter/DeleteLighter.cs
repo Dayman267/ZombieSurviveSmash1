@@ -7,6 +7,6 @@ public class DeleteLighter : NetworkBehaviour
     [SerializeField] private string sceneName = "DimaSceneDD";
     void Start()
     {
-        if(SceneManager.GetActiveScene().name != sceneName) Destroy(gameObject);
+        if(SceneManager.GetActiveScene().name != sceneName) gameObject.SetActive(false);
     }
 }

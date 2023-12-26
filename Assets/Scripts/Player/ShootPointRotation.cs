@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShootPointRotation : MonoBehaviour
@@ -17,8 +15,8 @@ public class ShootPointRotation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 lookDir = mousePos - playerRb.position;
-        float angle = Mathf.Atan2(lookDir.x, lookDir.y) * Mathf.Rad2Deg;
+        var lookDir = mousePos - playerRb.position;
+        var angle = Mathf.Atan2(lookDir.x, lookDir.y) * Mathf.Rad2Deg;
         rb.rotation = -angle;
     }
 }

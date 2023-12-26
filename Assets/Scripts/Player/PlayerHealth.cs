@@ -5,14 +5,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float health;
     [SerializeField] private float maxHealth;
 
-    public float GetHealth()
-    {
-        return health;
-    }
-
     private void Start()
     {
         health = maxHealth;
+    }
+
+    public float GetHealth()
+    {
+        return health;
     }
 
     public void TakeDamage(float damage)
@@ -23,12 +23,8 @@ public class PlayerHealth : MonoBehaviour
     public void RestoreHealth(float plusHealth)
     {
         if (health + plusHealth >= maxHealth)
-        {
             health = maxHealth;
-        }
         else
-        {
             health += plusHealth;
-        }
     }
 }

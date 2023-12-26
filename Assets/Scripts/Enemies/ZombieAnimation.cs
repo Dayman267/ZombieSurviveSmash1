@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ZombieAnimation : MonoBehaviour
 {
-    private Animator anim;
-    private string currentAnimation;
-
-    private Vector2 startVector;
-    private Vector2 endVector;
-
-    private Transform player;
-    [SerializeField, Range(0, 5)] private float biteDistanse = 1.5f;
-
-    private ZombieHealth health;
-    private PlayerHealth playerHealth;
+    [SerializeField] [Range(0, 5)] private float biteDistanse = 1.5f;
 
     [SerializeField] private float biteDamage;
+    private Animator anim;
+    private string currentAnimation;
+    private Vector2 endVector;
+
+    private ZombieHealth health;
+
+    private Transform player;
+    private PlayerHealth playerHealth;
+
+    private Vector2 startVector;
 
     private void Start()
     {
@@ -30,7 +28,7 @@ public class ZombieAnimation : MonoBehaviour
     private void FixedUpdate()
     {
         startVector = transform.position;
-        if(health.GetHealth() <= 0)
+        if (health.GetHealth() <= 0)
         {
             ChangeAnimation("zombie_death");
             Destroy(gameObject.GetComponent<ZombieMovement>());
@@ -56,7 +54,6 @@ public class ZombieAnimation : MonoBehaviour
         {
             ChangeAnimation("zombie_stay");
         }
-
     }
 
     /*private IEnumerator BiteCoroutine()

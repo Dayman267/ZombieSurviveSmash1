@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 public class DynamicInventoryDisplay : InventoryDisplay
 {
@@ -9,10 +8,8 @@ public class DynamicInventoryDisplay : InventoryDisplay
 
     protected override void Start()
     {
-
         base.Start();
     }
-
 
 
     public void RefreshDynamicInventory(InventorySystem invToDisplay)
@@ -30,7 +27,7 @@ public class DynamicInventoryDisplay : InventoryDisplay
 
         if (invToDisplay == null) return;
 
-        for (int i = 0; i < invToDisplay.InventorySize;i++)
+        for (var i = 0; i < invToDisplay.InventorySize; i++)
         {
             var uiSlot = Instantiate(slotPrefab, transform);
             slotDictionary.Add(uiSlot, invToDisplay.InventorySlots[i]);
@@ -41,11 +38,8 @@ public class DynamicInventoryDisplay : InventoryDisplay
 
     private void ClearSlots()
     {
-        foreach(var item in transform.Cast<Transform>())
-        {
-            Destroy(item.gameObject);
-        }
+        foreach (var item in transform.Cast<Transform>()) Destroy(item.gameObject);
 
-        if(slotDictionary != null) slotDictionary.Clear();
+        if (slotDictionary != null) slotDictionary.Clear();
     }
 }
