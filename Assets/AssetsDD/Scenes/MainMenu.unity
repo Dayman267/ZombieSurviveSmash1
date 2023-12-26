@@ -1285,7 +1285,7 @@ MonoBehaviour:
   autoConnectClientBuild: 0
   sendRate: 60
   offlineScene: Assets/AssetsDD/Scenes/MainMenu.unity
-  onlineScene: Assets/AssetsDD/Scenes/Hub.unity
+  onlineScene: Assets/AssetsDD/Scenes/DimaSceneDD.unity
   transport: {fileID: 1233058210}
   networkAddress: localhost
   maxConnections: 4
