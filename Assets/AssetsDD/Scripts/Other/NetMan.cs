@@ -44,6 +44,14 @@ public class NetMan : NetworkManager
             ActivatePlayerSpawn();
         }
     }
+
+    /*public void ChangeServerScene(string newSceneName)
+    {
+        if (isServer)
+        {
+            
+        }
+    }*/
 }
 
 public struct PosMessage : NetworkMessage //наследуемся от интерфейса NetworkMessage, чтобы система поняла какие данные упаковывать

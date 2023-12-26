@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class OpenDimaSceneDD : NetworkBehaviour
 {
-    public void Transition()
+    public void SwitchScene(string sceneName)
     {
-        SceneManager.LoadScene("DimaSceneDD");
+        SceneManager.LoadScene(sceneName);
     }
 }

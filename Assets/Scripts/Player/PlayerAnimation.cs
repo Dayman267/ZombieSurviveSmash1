@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -16,10 +14,10 @@ public class PlayerAnimation : MonoBehaviour
         health = GetComponent<PlayerHealth>();
     }
 
-    void Update()
+    private void Update()
     {
         GetDirections();
-        if(health.GetHealth() <= 0)
+        if (health.GetHealth() <= 0)
         {
             ChangeAnimation("pers_death");
             Destroy(anim, 0.8f);
@@ -27,9 +25,18 @@ public class PlayerAnimation : MonoBehaviour
             Destroy(gameObject.GetComponent<PlayerHealth>());
             Destroy(gameObject.GetComponent<PlayerAnimation>());
         }
-        else if (direction == Vector2.zero) ChangeAnimation("idle");
-        else if (direction == Vector2.up) ChangeAnimation("running_back");
-        else ChangeAnimation("running_right");
+        else if (direction == Vector2.zero)
+        {
+            ChangeAnimation("idle");
+        }
+        else if (direction == Vector2.up)
+        {
+            ChangeAnimation("running_back");
+        }
+        else
+        {
+            ChangeAnimation("running_right");
+        }
     }
 
     private void GetDirections()
